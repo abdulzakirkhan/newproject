@@ -198,6 +198,11 @@ h3{
   width: 104px !important;
   height: 40px !important;
 }
+
+.w-77{
+  width: 77px !important;
+  height: 77px !important;
+}
 @media (max-width:500px) {
   .non{
     display: none !important;

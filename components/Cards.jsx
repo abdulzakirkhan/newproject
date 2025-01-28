@@ -14,7 +14,7 @@ const Cards = ({cardsData}) => {
                     <p className="p1 text-grey">{card.title}</p>
                     <h1 className="font-bold text-5xl">{card.count}</h1>
                     </div>
-                    <div className="bg-no-repeat bg-cover bg-center w-[77] h-[77] flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`}}>
+                    <div className="bg-no-repeat bg-cover bg-center w-77 w-[77] h-[77] flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`}}>
                         <Image src={card.icon} width={39} height={39} alt="" />
                     </div>
                 </div>
