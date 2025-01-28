@@ -28,7 +28,7 @@ const Orders = () => {
             </div>
           {order.status === "paid" ? (
             <div className="md:mb-16">
-              <button className="bg-green p3 w-[140] h-[35] flex justify-center items-center text-white rounded-full">
+              <button className="bg-green p3 w-[140] h-[35] w-h flex justify-center items-center text-white rounded-full">
                 Get free Credit
               </button>
             </div>

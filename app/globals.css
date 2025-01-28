@@ -184,8 +184,15 @@ h3{
 }
 
 
+.w-h{
+  width: 140px !important;
+  height: 35px !important;
+}
 
-
+.w-h40{
+  height: 40px !important;
+  width: 219px !important;
+}
 
 @media (max-width:500px) {
   .non{
