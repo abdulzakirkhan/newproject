@@ -115,7 +115,7 @@ const OrderDetail = ({ params }) => {
                     
                   }
                     {order.status==="paid" ? 
-                    <button className="btnText mx-2 text-white bg-primary flex justify-center items-center gap-3 rounded-md w-[219] h-[40]">
+                    <button className="btnText mx-2 text-white bg-primary flex justify-center items-center gap-3 rounded-md w-219 w-[219] h-[40]">
                       <Image src={"/orders/meeting.svg"} width={13} height={16} alt="" />
                       Schedule Meeting
                     </button>
