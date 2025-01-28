@@ -26,7 +26,7 @@ const Sidebar = () => {
           className={`flex ${!isCollapsed ? 'px-3' : ''} py-6 items-center space-x-3 border-b-2 relative`}
         >
           <button
-            className={`bg-bg w-[23] h-[23] rounded-full flex justify-center items-center absolute ${!isCollapsed ? "-right-3" : "-right-9"} top-7`}
+            className={`bg-bg w-[23] w-23 h-[23] rounded-full flex justify-center items-center absolute ${!isCollapsed ? "-right-3" : "-right-9"} top-7`}
             onClick={toggleSidebar}
           >
             <Image src={"/icons/sidebar/arrow.svg"} width={8} height={8} alt="" />
