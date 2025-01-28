@@ -14,8 +14,8 @@ const Cards = ({cardsData}) => {
                     <p className="p1 text-grey">{card.title}</p>
                     <h1 className="font-bold text-5xl">{card.count}</h1>
                     </div>
-                    <div className="bg-no-repeat bg-cover bg-center w-[77] h-[77] flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`}}>
-                    <Image src={card.icon} width={39} height={39} alt="" />
+                    <div className="bg-no-repeat bg-cover bg-center flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`,width:"80px",height:"80px"}}>
+                        <Image src={card.icon} width={39} height={39} alt="" />
                     </div>
                 </div>
                 <div className="flex py-4 pe-14 items-center gap-4">
