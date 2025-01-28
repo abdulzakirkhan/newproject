@@ -194,6 +194,10 @@ h3{
   width: 219px !important;
 }
 
+.w-h104{
+  width: 104px !important;
+  height: 40px !important;
+}
 @media (max-width:500px) {
   .non{
     display: none !important;

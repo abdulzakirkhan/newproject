@@ -30,7 +30,7 @@ const DashboardPage = () => {
             <h2>My Orders</h2>
             <div className="md:flex items-center gap-2 lg:gap-8">
               <button className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]">Add Order</button>
-              <button className="bg-orange btnText text-white rounded-md w-[104] h-[40] flex justify-center items-center gap-2">
+              <button className="bg-orange btnText text-white rounded-md w-h104 w-[104] h-[40] flex justify-center items-center gap-2">
                 <Image src={"/icons/home/filter.svg"} width={12} height={5} alt="" />
                 Filter
               </button>
