@@ -17,7 +17,7 @@ const Orders = () => {
       <div className="flex flex-col flex-wrap  gap-2">
         
           {/* progressbarr */}
-          <div className="flex items-center flex-col lg:flex xl:justify-between gap-0">
+          <div className="md:flex md:items-center md:justify-between gap-0">
             <div className="relative size-32 lg:size-40">
               <svg className="size-full -rotate-90" viewBox="2 0 40 46" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="21" cy="22" r="13" fill="none" className="stroke-current text-grey dark:text-neutral-700" strokeWidth="2.7"></circle>
@@ -29,7 +29,7 @@ const Orders = () => {
               </div>
             </div>
           {order.status === "paid" ? (
-            <div className="">
+            <div className="md:mb-16">
               <button className="bg-green p3 w-[140] h-[35] flex justify-center items-center text-white rounded-full">
                 Get free Credit
               </button>
