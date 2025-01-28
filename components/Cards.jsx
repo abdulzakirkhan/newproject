@@ -11,10 +11,10 @@ const Cards = ({cardsData}) => {
             <div className="border-2 w-[330] md:w-[390] rounded-2xl p-3 px-8" key={index}>
                 <div className="flex items-center justify-between gap-8 py-4">
                     <div className="flex flex-col gap-6">
-                    <p className="p1 text-grey">{card.title}</p> 
+                    <p className="p1 text-grey">{card.title}</p>
                     <h1 className="font-bold text-5xl">{card.count}</h1>
                     </div>
-                    <div className="bg-no-repeat bg-cover bg-center flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`,width:"80px",height:"80px"}}>
+                    <div className="bg-no-repeat bg-cover bg-center w-[77] h-[77] flex justify-center items-center" style={{backgroundImage:`url(${card.bg})`}}>
                         <Image src={card.icon} width={39} height={39} alt="" />
                     </div>
                 </div>
