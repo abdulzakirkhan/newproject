@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
     const userLoggedIn = localStorage.getItem("isLoggedIn");
     if (userLoggedIn) {
       setIsAuth(true);
-      router.push("/dashboard")
+      router.push("/")
     } else {
       setIsAuth(false);
     }
