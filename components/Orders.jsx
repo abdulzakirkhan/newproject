@@ -9,8 +9,6 @@ import React from 'react'
 const Orders = () => {
   return (
     <>
-    {/* <div className="w-full md:col-span-6 border-2 border-red flex flex-col gap-6 mt-5"> */}
-
     {ordersData && ordersData.length > 0 ? (
   ordersData.map((order, index) => (
     <Link href={`/orders/${order.id}`} className="w-full md:col-span-6 border-2 rounded-xl px-2 md:px-5 pt-0 pb-5 flex gap-2 items-start" key={index}>
@@ -108,7 +106,6 @@ const Orders = () => {
         </div>
     </div>
     )}
-    {/* </div> */}
     </>
   )
 }
