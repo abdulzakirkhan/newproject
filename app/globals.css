@@ -203,6 +203,35 @@ h3{
   width: 77px !important;
   height: 77px !important;
 }
+
+.w-111,.w-190{
+  height: 40px !important;
+}
+
+.w-111{
+  width: 111px !important;
+}
+.w-190{
+  width: 190px !important;
+}
+
+.w-219{
+  width: 219px !important;
+  height: 40px !important;
+}
+
+.h-200{
+  height: 200px !important;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width:500px) {
   .non{
     display: none !important;

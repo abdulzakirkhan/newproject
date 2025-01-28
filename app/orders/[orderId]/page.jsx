@@ -107,7 +107,7 @@ const OrderDetail = ({ params }) => {
                 <div className="flex wrap gap-3 items-center">
                     {order.status === "paid" ?
                     <div className="">
-                    <button className="btnTex bg-primary flex justify-center rounded-md gap-4 text-white items-center w-[219] h-[40]">
+                    <button className="btnTex bg-primary flex justify-center rounded-md gap-4 text-white items-center w-219 w-[219] h-[40]">
                       <Image src={"/orders/download.svg"} width={12} height={12} alt="download" />
                       Download File
                     </button>
@@ -154,15 +154,15 @@ const OrderDetail = ({ params }) => {
             {order.status === "paid" ?
                 <div className="py-4 w-[320] md:w-full mt-4 flex justify-between items-start">
                   <div className="flex  gap-3">
-                    <button className="text-white btnText rounded-md w-[111] h-[40] bg-green">Marks</button>
-                    <button className="text-white btnText rounded-md w-[190] h-[40] bg-orange">Tip your writer</button>
+                    <button className="text-white btnText rounded-md w-[111] w-111 h-[40] bg-green">Marks</button>
+                    <button className="text-white btnText rounded-md w-[190] w-190 h-[40] bg-orange">Tip your writer</button>
                   </div>
               </div> 
             : ""
             }
             <div className="w-[320] md:w-full wrap h-[2] bg-grey rounded-lg mt-4"></div>
             <h1 className="mt-20">Join Live</h1>
-            <div className="w-full hover:scale-105 transition-all duration-300 ease-in-out flex flex-col justify-center items-center h-[200] bg-[#A3DCA1] mt-2 rounded-lg">
+            <div className="w-full hover:scale-105 transition-all duration-300 ease-in-out flex flex-col justify-center items-center h-200 h-[200] bg-[#A3DCA1] mt-2 rounded-lg">
               { liv && (
                 <button className="btn-group-button">
                   <Image src="/orders/btnGroup.svg" width={90} height={90} alt="Button Group Image" />
