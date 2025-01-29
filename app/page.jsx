@@ -6,7 +6,7 @@ import Image from "next/image";
 import Cards from "@/components/Cards";
 import Orders from "@/components/Orders";
 import { cardsData } from "./data";
-
+import { motion } from 'framer-motion';
 const DashboardPage = () => {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -27,16 +27,45 @@ const DashboardPage = () => {
     <section className={`${isLoggedIn? "lg:px-28":"px-0"} block justify-center items-center`}>
       {isLoggedIn ? (
         <div className="container mx-auto py-8">
-          <div className="lg:w-full flex  flex-wrap justify-between sm:justify-between items-center">
-            <h2 className="px-5 md:px-0">My Orders</h2>
+          <motion.div
+            className="lg:w-full flex flex-wrap justify-between sm:justify-between items-center"
+            initial={{ opacity: 0, y: 20 }}  // Starts with opacity 0 and a slight upward offset
+            whileInView={{ opacity: 1, y: 0 }}  // Fades in and slides to the original position
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+            {/* Header */}
+            <motion.h2
+              className="px-5 md:px-0"
+              initial={{ opacity: 0, y: -20 }}  // Starts with opacity 0 and slight offset from above
+              whileInView={{ opacity: 1, y: 0 }}  // Fades in and moves to the original position
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}  // Delay for staggered effect
+            >
+              My Orders
+            </motion.h2>
+
             <div className="flex items-center flex-wrap gap-2 lg:gap-8">
-              <button className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]">Add Order</button>
-              <button className="bg-orange btnText text-white rounded-md w-h104 w-[104] h-[40] flex justify-center items-center gap-2">
+              {/* Add Order Button */}
+              <motion.button
+                className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]"
+                initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
+                whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}  // Delay for staggered effect
+              >
+                Add Order
+              </motion.button>
+
+              {/* Filter Button */}
+              <motion.button
+                className="bg-orange btnText text-white rounded-md w-h104 w-[104] h-[40] flex justify-center items-center gap-2"
+                initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
+                whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}  // Delay for staggered effect
+              >
                 <Image src={"/icons/home/filter.svg"} width={12} height={5} alt="" />
                 Filter
-              </button>
+              </motion.button>
             </div>
-          </div>
+            </motion.div>
 
 
           <div className="flex flex-wrap gap-8 py-8">

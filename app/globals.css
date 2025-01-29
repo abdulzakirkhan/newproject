@@ -237,6 +237,9 @@ h3{
   height: 23px !important;
 }
 
+.h-custom{
+  height: 88vh !important;
+}
 @media (max-width:500px) {
   .non{
     display: none !important;
