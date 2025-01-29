@@ -39,7 +39,7 @@ const DashboardPage = () => {
           </div>
 
 
-          <div className="flex flex-wrap gap-8 py-6">
+          <div className="flex flex-wrap gap-8 py-8">
             {/* Cards */}
             <Cards cardsData={cardsData} />
           </div>
