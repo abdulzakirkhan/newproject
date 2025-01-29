@@ -14,7 +14,7 @@ const Header = ({ profileName, profileImage }) => {
     <header className="bg-[#312E81] px-2 md:px-0">
 
     <div className="flex container mx-auto justify-center md:justify-end  items-center text-white m-0b space-x-1 md:space-x-6" style={{height:"94px"}}>
-      <button className="non bg-[#3BB537] p3 white md:px-4 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
+      <button className="non bg-[#3BB537] p3 white px-2 py-2 md:px-4 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
         Refer and Earn
       </button>
 

@@ -28,7 +28,7 @@ const DashboardPage = () => {
       {isLoggedIn ? (
         <div className="container mx-auto py-8">
           <motion.div
-            className="lg:w-full flex flex-wrap justify-between sm:justify-between items-center"
+            className="lg:w-full flex flex-wrap justify-center sm:justify-between items-center"
             initial={{ opacity: 0, y: 20 }}  // Starts with opacity 0 and a slight upward offset
             whileInView={{ opacity: 1, y: 0 }}  // Fades in and slides to the original position
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const DashboardPage = () => {
               My Orders
             </motion.h2>
 
-            <div className="flex items-center flex-wrap gap-2 lg:gap-8">
+            <div className="flex items-center wrap gap-2 lg:gap-8">
               {/* Add Order Button */}
               <motion.button
                 className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]"

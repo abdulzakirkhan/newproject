@@ -27,7 +27,7 @@ const OrderDetail = ({ params }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div
-          className="bg-no-repeat bg-center w-[330] md:w-full bg-cover flex justify-center items-center rounded-tl-2xl rounded-tr-2xl"
+          className={`bg-no-repeat bg-center w-[330] md:w-full bg-cover flex justify-center items-center rounded-tl-2xl ${order.status === "unpaid" ? "min-h-32 px-4":""} rounded-tr-2xl`}
           style={{
             backgroundImage: `url(${order.status === "paid" ? "/orders/banner.svg" : order.status === "remaining" ? "/orders/yellobanner.svg" : "/orders/red.svg"})`
           }}
@@ -179,7 +179,7 @@ const OrderDetail = ({ params }) => {
                 </button>
               ) : (
                 <Link href={`/orders/${order.id}/proceed-payment`}>
-                  <p className="btnText text-white flex justify-center items-center bg-primary rounded-md w-[219] h-[40]">
+                  <p className="btnText text-white flex justify-center items-center bg-primary rounded-md w-[219] w-219 h-[40]">
                     Proceed to Pay
                   </p>
                 </Link>

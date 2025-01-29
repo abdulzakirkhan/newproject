@@ -240,6 +240,9 @@ h3{
 .h-custom{
   height: 88vh !important;
 }
+.wrap{
+  flex-wrap: wrap !important;
+}
 @media (max-width:500px) {
   .non{
     display: none !important;
@@ -249,5 +252,11 @@ h3{
   }
   .wrap{
     flex-wrap: wrap !important;
+  }
+  .cust-width{
+    width: 100%;
+  }
+  .w-h40{
+    width: 180px !important;
   }
 }
