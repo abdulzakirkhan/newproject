@@ -228,7 +228,9 @@ h3{
 
 
 
-
+.cust-width{
+  width: 390px;
+}
 
 .w-23{
   width: 23px !important;

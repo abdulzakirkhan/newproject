@@ -27,7 +27,7 @@ const DashboardPage = () => {
     <section className={`${isLoggedIn? "lg:px-28":"px-0"} block justify-center items-center`}>
       {isLoggedIn ? (
         <div className="container mx-auto py-8">
-          <div className="lg:w-full flex  flex-wrap justify-between  md:justify-center sm:justify-between items-center">
+          <div className="lg:w-full flex  flex-wrap justify-between sm:justify-between items-center">
             <h2 className="px-5 md:px-0">My Orders</h2>
             <div className="flex items-center flex-wrap gap-2 lg:gap-8">
               <button className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]">Add Order</button>
