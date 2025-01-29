@@ -15,7 +15,8 @@ const DashboardPage = () => {
     // Check login status (this can be a session check)
     const userLoggedIn = localStorage.getItem("isLoggedIn");
     if (!userLoggedIn) {
-      router.push("/");
+      // setIsLoggedIn(false)
+      router.push("/")
     } else {
       router.push("/");
       // setIsLoggedIn(true);

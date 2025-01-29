@@ -8,7 +8,7 @@ const Cards = ({cardsData}) => {
     <>
     <div className="flex-wrap flex justify-center  gap-2">
         {cardsData.map((card,index) => (
-            <div className="border-2 w-[330] md:w-[390] rounded-2xl p-3 px-8" key={index}>
+            <div className="border-2 w-[340] md:w-[390] rounded-2xl p-3 px-8" key={index}>
                 <div className="flex items-center justify-between gap-8 py-4">
                     <div className="flex flex-col gap-6">
                     <p className="p1 text-grey">{card.title}</p>

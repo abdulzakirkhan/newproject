@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
       }
       setIsSubmitting(false);
       // Redirect to the dashboard after successful login (adjust with your router)
-      window.location.href = "/dashboard";
+      window.location.href = "/";
     }, 1000);
   };
 
