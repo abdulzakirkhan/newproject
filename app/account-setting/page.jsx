@@ -7,7 +7,7 @@ import React from 'react'
 const page = () => {
   return (
     <>
-      <section className="absolute top-[94] w-full h-[87vh] bg-[#F5F7FA]">
+      <section className="block justify-center items-center w-[100%] absolute top-[94] bg-[#F5F7FA]">
         <div className="container mt-12 mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-4">
             {/* Card 1 - Personal Information */}
