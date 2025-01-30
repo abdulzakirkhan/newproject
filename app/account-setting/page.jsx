@@ -17,7 +17,7 @@ const page = () => {
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.6, ease: 'easeOut' }} // Add smooth transition
             >
-              <Link href="https://www.hybridresearchcenter.com/profileupdate">
+              <Link href="/profile-update">
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Personal Information</p>
@@ -36,7 +36,7 @@ const page = () => {
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.8, ease: 'easeOut' }} // Add smooth transition
             >
-              <Link href="https://www.hybridresearchcenter.com/profileupdate">
+              <Link href="/update-password">
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Update Password</p>
