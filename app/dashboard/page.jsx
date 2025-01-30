@@ -4,29 +4,28 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Cards from "@/components/Cards";
-import Orders from "@/components/Orders";
-import { cardsData } from "./data";
 import { motion } from 'framer-motion';
+import { cardsData } from "../data";
 const DashboardPage = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
-  useEffect(() => {
-    // Check login status (this can be a session check)
-    const userLoggedIn = localStorage.getItem("isLoggedIn");
-    if (!userLoggedIn) {
-      // setIsLoggedIn(false)
-      router.push("/")
-    } else {
-      router.push("/");
-      // setIsLoggedIn(true);
-    }
-  }, [router]);
+  // useEffect(() => {
+  //   // Check login status (this can be a session check)
+  //   const userLoggedIn = localStorage.getItem("isLoggedIn");
+  //   if (!userLoggedIn) {
+  //     // setIsLoggedIn(false)
+  //     router.push("/dashboard")
+  //   } else {
+  //     router.push("/");
+  //     // setIsLoggedIn(true);
+  //   }
+  // }, [router]);
 
   return (
-    <section className={`${isLoggedIn? "lg:px-28":"px-0"} block justify-center items-center`}>
+    <section className={`block justify-center items-center w-[100%] absolute top-[94]`}>
       {isLoggedIn ? (
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto py-8 px-6">
           <motion.div
             className="lg:w-full flex flex-wrap justify-center sm:justify-between items-center"
             initial={{ opacity: 0, y: 20 }}  // Starts with opacity 0 and a slight upward offset
@@ -68,14 +67,11 @@ const DashboardPage = () => {
             </motion.div>
 
 
-          <div className="flex flex-wrap gap-8 py-8">
+          <div className="grid md:grid-cols-12 gap-12 py-8">
             {/* Cards */}
             <Cards cardsData={cardsData} />
           </div>
-          <div className="grid px-2 md:grid-cols-12 gap-1 lg:gap-4 lg:w-full">
-
-            <Orders />
-          </div>
+         
         </div>
       ) : (
         <p>Loading...</p>

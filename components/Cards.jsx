@@ -6,10 +6,9 @@ import React from 'react'
 const Cards = ({cardsData}) => {
   return (
     <>
-    <div className="flex-wrap flex justify-center  gap-2">
     {cardsData.map((card, index) => (
   <motion.div
-    className="border-2 w-[330] cust-width rounded-2xl p-3 px-8"
+    className="border-2 w-full md:col-span-4 rounded-2xl p-3 px-8"
     key={index}
     initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and slightly below the final position
     whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position
@@ -34,7 +33,6 @@ const Cards = ({cardsData}) => {
     </div>
   </motion.div>
 ))}
-        </div>
     </>
   )
 }
