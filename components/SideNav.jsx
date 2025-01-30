@@ -32,7 +32,7 @@ const Sidebar = () => {
           >
             <Image src={"/icons/sidebar/arrow.svg"} width={8} height={8} alt="" />
           </button>
-
+    
           {/* Profile section with dropdown */}
           <div className="relative">
             <img

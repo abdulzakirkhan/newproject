@@ -253,6 +253,24 @@ h3{
   outline: none;
 }
 
+.overflow{
+  overflow: auto;
+}
+
+
+@media (max-width:600px) {
+  .res{
+    overflow-x: auto !important;
+    width: 90% !important;
+    overflow: auto;
+  }
+  .w{
+    width: 80%;
+  }
+  .sm{
+    width: 400px !important;
+  }
+}
 @media (max-width:500px) {
   .non{
     display: none !important;
