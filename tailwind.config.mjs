@@ -5,6 +5,12 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'h-[80]',
+    'w-[80]',
+    'w-[100%]',
+    'top-[94]'
+  ],
   theme: {
     extend: {
       boxShadow: {
