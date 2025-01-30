@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed h-custom md:h-auto z-50 ${!isCollapsed ? "-left-6 " : "left-0"} top-[94] md:left-0 p-0 m-0 ${isCollapsed ? 'w-46' : 'w-10 md:w-20'} border-2 transition-all duration-300 bg-[#FFFFFF]`}
+      className={`fixed md:h-auto z-50 ${!isCollapsed ? "-left-6 " : "left-0"} top-[94] md:left-0 p-0 m-0 ${isCollapsed ? 'w-46' : 'w-10 md:w-20'} border-2 transition-all duration-300 bg-[#FFFFFF]`} style={{top:"94px"}}
     >
       <div className="flex flex-col items-center m-0 p-0 w-full xl:h-[120vh]">
         {/* Top section with profile and sidebar toggle */}
