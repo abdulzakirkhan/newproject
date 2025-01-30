@@ -22,7 +22,7 @@ const Page = () => {
 
   return (
     <>
-      <section className="absolute top-[94] w-full">
+      <section className="absolute top-[94] w-full" style={{top:"94px"}}>
         <div className="container py-8 mx-auto px-6 flex flex-col justify-center items-center">
           {/* Heading with fade-in animation */}
           <motion.h1

@@ -3,7 +3,7 @@ import { rewardsData } from '../data'
 
 const page = () => {
   return (
-    <section className="absolute top-[94] w-full bg-[#F4F6F9]">
+    <section className="absolute top-[94] w-full bg-[#F4F6F9]" style={{top:"94px"}}>
         <div className="container mt-6 mx-auto px-6">
             <h1>Rewards</h1>
 

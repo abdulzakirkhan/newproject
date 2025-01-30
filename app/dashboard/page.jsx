@@ -23,7 +23,7 @@ const DashboardPage = () => {
   // }, [router]);
 
   return (
-    <section className={`block justify-center items-center w-[100%] absolute top-[94]`}>
+    <section className={`block justify-center items-center w-[100%] absolute top-[94]`} style={{top:"94px"}}>
       {isLoggedIn ? (
         <div className="container mx-auto py-8 px-6">
           <motion.div

@@ -21,7 +21,7 @@ const page = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Personal Information</p>
-                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl">
+                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
                       <Image src={"/account/user.png"} width={50} height={40} alt="user information" />
                     </div>
                   </div>
@@ -40,7 +40,7 @@ const page = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Update Password</p>
-                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl">
+                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
                       <Image src={"/account/key.png"} width={50} height={40} alt="user information" />
                     </div>
                   </div>
@@ -59,7 +59,7 @@ const page = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Delete Account</p>
-                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl">
+                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
                       <Image src={"/account/bin.png"} width={50} height={40} alt="user information" />
                     </div>
                   </div>

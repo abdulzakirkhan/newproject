@@ -12,7 +12,7 @@ const page = () => {
     const closeModal = () => setIsModalOpen(false);
   return (
     <>
-        <section className="absolute top-[94] w-full">
+        <section className="absolute top-[94] w-full" style={{top:"94px"}}>
             <div className="container mx-auto px-6 mt-8">
                 <div className="grid md:grid-cols-12">
                     <div className="w-full md:col-span-12">

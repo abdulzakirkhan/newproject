@@ -5,7 +5,7 @@ import Orders from '@/components/Orders'
 const page = () => {
   return (
     <>
-    <section className=" w-full absolute top-[94]">
+    <section className=" w-full absolute top-[94]" style={{top:"94px"}}>
 
       <div className="container mx-auto md:px-6">
         <h1 className="px-4 py-8">Orders</h1>

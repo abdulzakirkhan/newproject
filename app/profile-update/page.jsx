@@ -34,7 +34,7 @@ const [value, setValue] = useState("");
 
   return (
     <>
-      <section className="absolute top-[94] w-full bg-[#f7f7f7]">
+      <section className="absolute top-[94] w-full bg-[#f7f7f7]" style={{top:"94px"}}>
         <div className="container mx-auto px-6 py-8">
           <div className="flex justify-center">
             <motion.div

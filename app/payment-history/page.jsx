@@ -19,7 +19,7 @@ const page = () => {
     
   return (
     <>
-    <section className="absolute w-full top-[94] py-8">
+    <section className="absolute w-full top-[94] py-8" style={{top:"94px"}}>
         <div className="container mx-auto px-6">
             <h1 className=" text-center py-3 md:py-0 md:text-start">Payment History</h1>
 

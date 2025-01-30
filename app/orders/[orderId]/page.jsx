@@ -16,7 +16,7 @@ const OrderDetail = ({ params }) => {
   
   return (
     <>
-    <section className={`w-[100%] absolute mt-10 top-[94]`}>
+    <section className={`w-[100%] absolute mt-10 top-[94]`} style={{top:"94px"}}>
   <div className="container mx-auto px-6 pb-10">
     <div className="">
       <motion.div

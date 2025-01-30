@@ -30,7 +30,7 @@ const Page = () => {
 
   return (
     <>
-      <section className="absolute top-[94] w-full">
+      <section className="absolute top-[94] w-full"style={{top:"94px"}}>
         <div className="bg-[#4B67DB] fixed w-full">
           <div className="container mx-auto px-6 py-2">
             <h2 className="text-white">Customer Support</h2>
