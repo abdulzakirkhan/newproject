@@ -6,6 +6,7 @@ import Image from "next/image";
 import Cards from "@/components/Cards";
 import { motion } from 'framer-motion';
 import { cardsData } from "../data";
+import Link from "next/link";
 const DashboardPage = () => {
   // const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -44,14 +45,16 @@ const DashboardPage = () => {
 
             <div className="flex items-center wrap gap-2 lg:gap-8">
               {/* Add Order Button */}
-              <motion.button
-                className="w-[120] md:w-[219] w-h40 bg-primary rounded-md btnText text-white h-[40]"
+              <motion.div
+                className="w-[120] md:w-[219] flex justify-center items-center cursor-pointer w-h40 bg-primary rounded-md btnText text-white h-[40]"
                 initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
                 whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}  // Delay for staggered effect
               >
-                Add Order
-              </motion.button>
+                <Link href={"/initiate-order"}>
+                  Add Order
+                </Link>
+              </motion.div>
 
               {/* Filter Button */}
               <motion.button

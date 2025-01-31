@@ -24,11 +24,11 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
-  const [isAuth, setIsAuth] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [passwordVisible, setPasswordVisible] = useState(false);
+  // const [isAuth, setIsAuth] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const router = useRouter();
+  // const router = useRouter();
 
 
   // const validationSchema = Yup.object({
@@ -47,19 +47,20 @@ export default function RootLayout({ children }) {
 
   //   // Simulate API call (you can replace this with your actual login logic)
   //   setTimeout(() => {
+  //     setIsAuth(true)
   //     // If successful, save the "remember me" in localStorage
-  //     if (values.rememberMe) {
-  //       localStorage.setItem("isLoggedIn", "true");
-  //     }
-  //     setIsSubmitting(false);
-  //     window.location.href = "/";
+  //     // if (values.rememberMe) {
+  //     //   localStorage.setItem("isLoggedIn", "true");
+  //     // }
+  //     // setIsSubmitting(false);
+  //     window.location.href = "/dashboard";
   //   }, 1000);
   // };
 
   // useEffect(() => {
   //   const userLoggedIn = localStorage.getItem("isLoggedIn");
   //   if (!userLoggedIn) {
-  //     // setIsAuth(true);
+  //     setIsAuth(true);
   //     // router.push("/")
   //     router.push("/dashboard")
 
@@ -68,7 +69,7 @@ export default function RootLayout({ children }) {
   //   }
   // }, [router]);
 
-  // if (isAuth) {
+  // if (!isAuth) {
   //   return (
   //     <html lang="en">
   //       <body className={``}>
