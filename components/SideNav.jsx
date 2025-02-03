@@ -45,11 +45,11 @@ const Sidebar = () => {
             />
 
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg">
+              <div className="absolute border-2 shadow-md -right-6 mt-2 bg-white text-black rounded-md">
                 <ul>
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Profile</li>
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Settings</li>
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Logout</li>
+                  <li className="px-4 py-2 cursor-pointer text-black">Profile</li>
+                  <li className="px-4 py-2 cursor-pointer text-black">Settings</li>
+                  <li className="px-4 py-2 cursor-pointer text-black">Logout</li>
                 </ul>
               </div>
             )}
