@@ -34,6 +34,7 @@ const Sidebar = () => {
           </button>
     
           {/* Profile section with dropdown */}
+          {/* fina */}
           <div className="relative">
             <img
               src={"/header/profile.svg"}
