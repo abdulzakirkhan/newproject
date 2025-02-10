@@ -1,119 +1,108 @@
-"use client"
+"use client";
 
+import { useState } from "react";
+import {
+  FaBars,
+  FaUser,
+  FaChartBar,
+  FaWallet,
+  FaCommentDots,
+  FaGift,
+  FaFileContract,
+  FaSignOutAlt,
+} from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-
-const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showPopUp, setShowPopUp] = useState(false)
+  const pathname = usePathname();
+  const menuItems = [
+    { title: "Dashboard", path: "/dashboard", icon: "/dashboard.png" },
+    { title: "Orders", path: "/orders", icon: "/icons/sidebar/orders.svg" },
+    { title: "Payment History", path: "/payment-history", icon: "/icons/sidebar/payment.svg" },
+    { title: "Wallet", path: "/wallet", icon: "/icons/sidebar/wallet.svg" },
+    { title: "Chat", path: "/app-chatt", icon: "/icons/sidebar/chatt.svg" },
+    { title: "Rewards", path: "/rewards", icon: "/icons/sidebar/rewards.svg" },
+    { title: "Terms & Conditions", path: "/terms-conditions", icon: "/icons/sidebar/terms.svg" },
+    { title: "Account Setting", path: "/account-setting", icon: "/user.png" },
+  ];
 
-  const toggleSidebar = () => {
-    setIsCollapsed((prev) => !prev); // Toggle the sidebar state
-  };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev); // Toggle the dropdown menu
-  };
-
+  const handleClick = () => {
+    setShowPopUp(!showPopUp)
+  }
   return (
     <div
-      className={`fixed md:h-auto z-50 ${!isCollapsed ? "-left-6 " : "left-0"} top-[94] md:left-0 p-0 m-0 ${isCollapsed ? 'w-46' : 'w-10 md:w-20'} border-2 transition-all duration-300 bg-[#FFFFFF]`} style={{top:"94px"}}
+      className={`bg-gray-900 sm-screen-side-nav h-screen text-white fixed left-0 z-50 flex flex-col transition-all duration-1000 md:duration-1000 ${
+        isCollapsed ? "w-10 md:w-16" : "w-52"
+      }`} style={{top:"75px"}}
     >
-      <div className="flex flex-col items-center m-0 p-0 w-full xl:h-[120vh]">
-        {/* Top section with profile and sidebar toggle */}
-        <div
-          className={`flex ${!isCollapsed ? 'px-3' : ''} py-6 items-center space-x-3 border-b-2 relative`}
-        >
-          <button
-            className={`bg-bg w-[23] w-23 h-[23] rounded-full flex justify-center items-center absolute ${!isCollapsed ? "-right-3" : "-right-9"} top-7`}
-            onClick={toggleSidebar}
-          >
-            <Image src={"/icons/sidebar/arrow.svg"} width={8} height={8} alt="" />
-          </button>
-    
-          {/* Profile section with dropdown */}
-          {/* fina */}
-          <div className="relative">
-            <img
-              src={"/header/profile.svg"}
-              alt="Profile"
-              width={40}
-              height={40}
-              className="rounded-full cursor-pointer"
-              onClick={toggleDropdown}
-            />
-
-            {isDropdownOpen && (
-              <div className="absolute border-2 shadow-md -right-6 mt-2 bg-white text-black rounded-md">
-                <ul>
-                  <li className="px-4 py-2 cursor-pointer text-black">Profile</li>
-                  <li className="px-4 py-2 cursor-pointer text-black">Settings</li>
-                  <li className="px-4 py-2 cursor-pointer text-black">Logout</li>
-                </ul>
-              </div>
-            )}
-          </div>
-
-          {/* Display the user text only when the sidebar is expanded */}
-          {isCollapsed && <span className="text-sm">Hello, User</span>}
-        </div>
-
-        {/* Sidebar Menu Items */}
-        <div className="flex flex-col gap-4 items-start">
-          <div className="flex flex-col content-end items-start p-4 space-y-6">
-            <Link href={"/dashboard"} className="flex active:bg-blue-800 items-center space-x-3">
-              <Image src={"/dashboard.png"} width={17} height={19} alt="Orders" />
-              {isCollapsed && <span className="text-sm p3">Dashboard</span>}
-            </Link>
-            <Link href={"/orders"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/orders.svg"} width={17} height={19} alt="Orders" />
-              {isCollapsed && <span className="text-sm p3">Orders</span>}
-            </Link>
-            <Link href={"/payment-history"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/payment.svg"} width={18} height={18} alt="Payment History" />
-              {isCollapsed && <span className="text-sm p3">Payment History</span>}
-            </Link>
-            <Link href={"/wallet"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/wallet.svg"} width={18} height={17} alt="Wallet" />
-              {isCollapsed && <span className="text-sm p3">Wallet</span>}
-            </Link>
-            <Link href={"/app-chatt"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/chatt.svg"} width={19} height={19} alt="Chat" />
-              {isCollapsed && <span className="text-sm p3">Chat</span>}
-            </Link>
-            <Link href={"/rewards"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/rewards.svg"} width={19} height={18} alt="Rewards" />
-              {isCollapsed && <span className="text-sm p3">Rewards</span>}
-            </Link>
-            <Link href={"terms-conditions"} className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/terms.svg"} width={19} height={18} alt="Terms & Conditions" />
-              {isCollapsed && <span className="text-sm p3">Terms & Conditions</span>}
-            </Link>
-            <Link href={"/account-setting"} className="flex items-center space-x-3">
-              <Image src={"/user.png"} width={24} height={14} alt="Account setting" />
-              {isCollapsed && <span className="text-sm p3">Account Setting</span>}
-            </Link>
-            <div className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/agent.svg"} width={16} height={14} alt="Switch to Agent" />
-              {isCollapsed && <span className="text-sm p3">Switch to Agent</span>}
-            </div>
-            <div className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/delete.svg"} width={16} height={14} alt="Delete Account" />
-              {isCollapsed && <span className="text-sm p3">Delete Account</span>}
-            </div>
-          </div>
-
-          {/* Logout Section */}
-          <div className="p-4">
-            <button className="flex items-center space-x-3">
-              <Image src={"/icons/sidebar/Logout.svg"} width={17} height={18} alt="Logout" />
-              {isCollapsed && <span className="text-sm p3">logout</span>}
-            </button>
-          </div>
-        </div>
+      {/* Sidebar Toggle Button */}
+      <div className="flex justify-end">
+        <button className="mt-3 md:mt-0 px-2 md:p-4 flex justify-center" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <FaBars size={24} />
+        </button>
       </div>
+
+      {/* Profile Section */}
+      {!isCollapsed && (
+        <div className="text-center p-3 profile">
+          <Image
+            src="/header/profile.svg"
+            alt="Profile"
+            width={80}
+            height={80}
+            className="rounded-full mx-auto cursor-pointer"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          />
+          <h2 className="text-lg text-white flex justify-center font-bold mt-2">Hello, User</h2>
+        </div>
+      )}
+
+      {/* Dropdown Menu */}
+      {isDropdownOpen && (
+        <div className="absolute top-36 left-16 mt-2 bg-white text-black rounded-md shadow-md">
+          <ul>
+            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Profile</li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Settings</li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Logout</li>
+          </ul>
+        </div>
+      )}
+
+      {/* Sidebar Menu Items */}
+      <nav className="mt-1 nav-items flex-grow space-y-0">
+        {menuItems.map((item, index) => {
+          const isActive = pathname === item.path;
+          return (
+            <Link key={index} href={item.path} className={`flex items-center px-4 py-2 ${isActive ? "bg-gray-700" : "hover:bg-gray-700"} transition`}>
+              <Image src={item.icon} width={18} height={18} alt={item.title} className="mr-4" />
+              {!isCollapsed && <span>{item.title}</span>}
+            </Link>
+          )
+      })}
+        {/* Logout Section */}
+      <div className="px-2 md:mt-1">
+        <button onClick={handleClick} className="flex text-white items-center space-x-4 hover:bg-red-700 p-2 rounded">
+          <FaSignOutAlt size={16} className="text-white" />
+          {!isCollapsed && <span className="text-white">Logout</span>}
+        </button>
+      </div>
+      </nav>
+
+      {showPopUp && (
+        <div className="fixed rounded-lg flex border-2 flex-col shadow-xl items-center gap-2 w-1/3 backdrop-blur-xl p-3 md:p-6" style={{top:"30%",left:"40%"}}>
+          <h1 className="text-black">Confirm Logout</h1>
+          <h3 className="text-black">Are you sure you want to logout?</h3>
+          <div className="flex items-center gap-4">
+            <button onClick={handleClick} className="text-black px-6 py-2 rounded-md border-2">Cancel</button>
+            <button className="px-6 py-2 rounded-md text-white bg-[#DC3545] ">Log Out</button>
+          </div>
+        </div>
+      )}
+      
     </div>
   );
 };

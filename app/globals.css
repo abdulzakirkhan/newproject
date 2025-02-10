@@ -241,7 +241,7 @@ h3{
   height: 88vh !important;
 }
 .wrap{
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap;
 }
 
 
@@ -268,7 +268,24 @@ h3{
   width: 75%;
 }
 
+.mod{
+  height: 80vh !important;
+  overflow: auto !important;
+}
+.p{
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+@media (max-width:1000px) {
+
+  .sm-screen-side-nav.h-screen{
+    height: 130vh !important;
+  }
+}
 @media (max-width:600px) {
+  .sm-mobile{
+    width: 96%;
+  }
   .res{
     overflow-x: auto !important;
     width: 90% !important;
@@ -299,5 +316,30 @@ h3{
   }
   .w-h40{
     width: 180px !important;
+  }
+}
+
+
+@media (max-width:500px) {
+  .non{
+    display: none !important;
+  }
+  .customWidth{
+    width: 90px;
+  }
+  .wrap{
+    flex-wrap: wrap !important;
+  }
+  .cust-width{
+    width: 100%;
+  }
+  .w-h40{
+    width: 180px !important;
+  }
+}
+
+@media (min-width: 1010px) and (max-width: 1400px) {
+  .p{
+    padding-left: 4rem !important;
   }
 }

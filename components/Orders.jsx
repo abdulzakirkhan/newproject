@@ -12,7 +12,7 @@ const Orders = () => {
         {ordersData && ordersData.length > 0 ? (
       ordersData.map((order, index) => (
         <motion.div
-          className="w-full md:col-span-6 border-2 rounded-xl px-2 md:px-5 pt-0 pb-5 flex gap-2 items-start"
+          className="w-full sm-mobile md:col-span-6 border-2 rounded-xl px-2 md:px-5 pt-0 pb-5 flex gap-2 items-start"
           key={index}
           initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and slightly below the final position
           whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position
@@ -45,44 +45,44 @@ const Orders = () => {
               </div>
               
               <div className="flex flex-col flex-wrap gap-2">
-                <div className="flex items-center gap-2">
+                <div className="flex md:items-center gap-2">
                   <span className='fs-18'>Topic:</span>
                   <p className="p3">{order.topic}</p>
                 </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-wrap md:items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <p className='fs-18 md:w-[100]'>Paper Type:</p>
                     <p className="p3">{order.paperType}</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap md:items-center gap-2">
                     <span className='fs-18'>Level:</span>
                     <p className="p3">{order.level}</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className='fs-18'>Category:</span>
                     <p className="p3">{order.category}</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className='fs-18'>Pages:</span>
                     <p className="p3">{order.pages}</p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center mt-3">
+              <div className="flex justify-start md:justify-between flex-wrap items-center mt-3">
                 <div className="flex flex-col gap-2">
-                  <div className="flex p3 items-center gap-3">
+                  <div className="flex p3 md:items-center gap-3">
                     <span>Order ID:</span> <span>{order.orderId}</span>
                   </div>
                   <div className="flex p3 items-center gap-3">
                     <span>Order placed:</span> <span>{order.orderPlace}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex md:items-center gap-2">
                     <span className="p2">Deadline:</span>
                     <span className='p3'>30/12/2024</span>
                   </div>
                 </div>
-                <div className="">
+                <div className="flex-wrap">
                   <div className="flex items-center gap-2">
                     <span className="fs-18">Total Price:</span>
                     <span className="p3">{order.totalPrice}</span>
@@ -92,7 +92,7 @@ const Orders = () => {
                     <span className={`p3 ${order.status === "paid" ? "text-green" : "text-red"}`}>{order.status}</span>
                   </div>
                   {order.status === "remaining" ? (
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                       <span className="text-red">Remaining Amount:</span>
                       <span className="text-red">{order.remaining}</span>
                     </div>

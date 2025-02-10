@@ -19,7 +19,7 @@ const page = () => {
     
   return (
     <>
-    <section className="absolute w-full top-[94] py-8" style={{top:"94px"}}>
+    <section className="mt-20">
         <div className="container mx-auto px-6">
             <h1 className=" text-center py-3 md:py-0 md:text-start">Payment History</h1>
 
@@ -124,7 +124,7 @@ const page = () => {
 
 
 
-        <div className="container mx-auto px-6 mt-10">
+        <div className="container mx-auto md:px-6 mt-10">
             <div className="grid md:grid-cols-12 gap-4">
 
                 {paymentHistory.map((payment,index) => (

@@ -24,9 +24,9 @@ const DashboardPage = () => {
   // }, [router]);
 
   return (
-    <section className={`block justify-center items-center w-[100%] absolute top-[94]`} style={{top:"94px"}}>
+    <section className={`mt-20`}>
       {isLoggedIn ? (
-        <div className="container mx-auto py-8 px-6">
+        <div className="container mx-auto py-8">
           <motion.div
             className="lg:w-full flex flex-wrap justify-center sm:justify-between items-center"
             initial={{ opacity: 0, y: 20 }}  // Starts with opacity 0 and a slight upward offset
@@ -70,7 +70,7 @@ const DashboardPage = () => {
             </motion.div>
 
 
-          <div className="grid md:grid-cols-12 gap-12 py-8">
+          <div className="grid md:grid-cols-12 gap-4 py-8">
             {/* Cards */}
             <Cards cardsData={cardsData} />
           </div>

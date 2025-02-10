@@ -34,11 +34,11 @@ const [value, setValue] = useState("");
 
   return (
     <>
-      <section className="absolute top-[94] w-full bg-[#f7f7f7]" style={{top:"94px"}}>
-        <div className="container mx-auto px-6 py-8">
+      <section className="mt-20">
+        <div className="container mx-auto px-0 md:px-6 py-8">
           <div className="flex justify-center">
             <motion.div
-              className="w-full md:w-1/2 bg-white shadow-xl p-8 rounded-xl"
+              className="w-full md:w-1/2 bg-white shadow-xl md:p-8 rounded-xl"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}

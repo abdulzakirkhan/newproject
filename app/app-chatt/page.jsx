@@ -30,16 +30,16 @@ const Page = () => {
 
   return (
     <>
-      <section className="absolute top-[94] w-full"style={{top:"94px"}}>
-        <div className="bg-[#4B67DB] fixed w-full">
+      <section className="mt-20">
+        <div className="bg-[#4B67DB] fixed w-full" style={{top:"75px"}}>
           <div className="container mx-auto px-6 py-2">
             <h2 className="text-white">Customer Support</h2>
           </div>
         </div>
 
-        <div className="container mt-12 mx-auto px-6">
+        <div className="container mt-28 md:mt-14 mx-auto md:px-6">
           {/* Messages container */}
-          <div className="messagesContainer flex flex-col overflow-auto py-4 mb-24">
+          <div className="messagesContainer flex flex-col overflow-auto py-10 mb-24">
             {messages.map((message, index) => (
               <div key={index} className="mb-4">
                 <div
@@ -66,7 +66,7 @@ const Page = () => {
 
           {/* Input area fixed at the bottom */}
           <div className="fixed bottom-0 w-full md:w-[92%] bg-white p-4 border-t-2">
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-wrap w-full items-center gap-3 space-x-4">
               <button className="bg-primary px-5 py-2 rounded-lg text-white">
                 <FaPaperclip className="text-2xl cursor-pointer" />
               </button>
@@ -75,7 +75,7 @@ const Page = () => {
                 value={message}
                 onChange={handleMessageChange}
                 placeholder="Type a message..."
-                className="w-[73%] p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-1/2 md:w-[73%] p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button className="text-white px-6 py-2 rounded-lg bg-primary">
                 <FaMicrophone className="text-2xl cursor-pointer" />

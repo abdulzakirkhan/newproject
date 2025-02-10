@@ -12,7 +12,7 @@ const page = () => {
     const closeModal = () => setIsModalOpen(false);
   return (
     <>
-        <section className="absolute top-[94] w-full" style={{top:"94px"}}>
+        <section className="mt-20">
             <div className="container mx-auto px-6 mt-8">
                 <div className="grid md:grid-cols-12">
                     <div className="w-full md:col-span-12">
@@ -49,19 +49,17 @@ const page = () => {
                     )}
                     </div>
                 </div>
-                <div className="grid md:grid-cols-12 mt-10">
-                    <div className="w-full md:col-span-5">
-                        <div className="p-6 border-2 rounded-2xl shadow-xl">
+                <div className="grid md:grid-cols-12 gap-6 mt-10">
+                    <div className="w-full md:col-span-6">
+                        <div className="p-6 h-full border-2 rounded-2xl shadow-xl">
                             <h1>Available Credit</h1>
                             <p className="p3 py-2">Rewards Amount: USD 0.05</p>
                             <p className="p3 py-2">Wallet Amount: USD 0.00</p>
                             <p>Total Credit (Rewards + Wallet): USD 0.05</p>
                         </div>
                     </div>
-                </div>
-                <div className="grid md:grid-cols-12 mt-10">
-                    <div className="w-full md:col-span-12">
-                        <div className="p-6 bg-[#d4d3e4] md:h-[240] flex justify-center items-center rounded-2xl shadow-xl">
+                    <div className="w-full md:col-span-6">
+                        <div className="p-6 h-full bg-[#d4d3e4] md:h-[240] flex justify-center items-center rounded-2xl shadow-xl">
                            <div className="flex gap-3 items-start">
                             <FaInfoCircle className="-mt-2" style={{fontSize:"45px"}} />
                             <p className="text-xl m-0"> With Bank Transfer Pay,You Will Receive The Wallet amount after a 4% deduction as a services fee, while with Payment Gateway, you will receive the wallet amount after a 24% deduction ,which includes a 4% service s fee and s 20% VAT.</p>
@@ -69,6 +67,9 @@ const page = () => {
                         </div>
                     </div>
                 </div>
+                {/* <div className="grid md:grid-cols-12">
+                    
+                </div> */}
             </div>
         </section>
     </>

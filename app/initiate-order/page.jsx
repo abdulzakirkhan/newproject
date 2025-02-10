@@ -37,7 +37,7 @@ const page = () => {
 
   return (
     <>
-      <section className={`block justify-center items-center w-[100%] absolute top-[94]`} style={{ top: "94px" }}>
+      <section className={`mt-20`}>
         <div className="container mx-auto px-6 mt-4">
           <div className="grid md:grid-cols-12 ">
             <div className="w-full md:col-span-12 flex justify-center items-center">
@@ -180,9 +180,9 @@ const page = () => {
 
       {/* Popup form */}
       {showPopup && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center" style={{top:"94px"}}>
-          <div className="bg-white p-6 rounded-lg shadow-xl w-1/2">
-            <p className="font-semibold mb-4">Please provide credentials from where your assistant will attend meeting.</p>
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center" style={{top:"94px",}}>
+          <div className="bg-white p-6 rounded-lg shadow-xl w-1/2 mod">
+            <p className="font-semibold mb-4 text-center">Please provide credentials from where your assistant will attend meeting.</p>
             <form onSubmit={handlePopupSubmit}>
               <div className="flex flex-col mb-4">
                 <label htmlFor="email" className="text-sm font-medium text-black">Email</label>

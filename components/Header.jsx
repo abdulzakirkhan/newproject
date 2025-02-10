@@ -1,20 +1,37 @@
 "use client";
 
+import { ClipboardDocumentIcon, ShareIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import { useState } from "react";
 import { HiSearch } from "react-icons/hi";
 
 const Header = ({ profileName, profileImage }) => {
+  const [showModal, setShowModal] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("https://hybridresearchcenter.app.link/u0Ck3qhUNOb");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  const handleInviteClick = () => {
+    setShowInviteForm(!showInviteForm)
+  }
+  const handleClick = () => {
+    setShowModal(!showModal)
+  }
   return (
+    <>
     <header className="bg-[#312E81] px-2 md:px-0 fixed w-full z-50">
 
-    <div className="flex container mx-auto justify-center md:justify-end  items-center text-white m-0b space-x-1 md:space-x-6" style={{height:"94px"}}>
-      <button className="non bg-[#3BB537] p3 white px-2 py-2 md:px-4 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
+    <div className="flex container mx-auto justify-center md:justify-end  items-center text-white m-0b space-x-1 md:space-x-6" style={{height:"75px"}}>
+      <button onClick={handleClick} className="non bg-[#3BB537] p3 white px-2 py-2 md:px-4 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
         Refer and Earn
       </button>
 
@@ -52,6 +69,42 @@ const Header = ({ profileName, profileImage }) => {
       </div>
     </div>
     </header>
+
+    {showModal ? (
+      <div className="z-50 backdrop-blur-xl border-2 w-1/2 rounded-xl shadow-lg fixed top-48" style={{left:"30%"}}>
+        <button onClick={handleClick} className="px-8 py-2">Back</button>
+         <div className="mb-8 pt-12 pb-4">
+            <div className="-mt-12">
+              <input
+                type="text"
+                value="https://hybridresearchcenter.app.link/u0Ck3qhUNOb"
+                readOnly
+                className="pr-16 ms-6 border border-gray-300 rounded-lg py-3 px-4" style={{width:"70%"}}
+              />
+            </div>
+            <div className="px-6 mt-3 mb-8">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="mt-4">
+                  <h2 className="text-2xl font-semibold text-gray-800">Invite Friends, Earn Credits</h2>
+                  <p className="text-gray-600 mt-2">Share your referral link and earn rewards for every friend who joins</p>
+                  <div className="mt-4 flex items-center">
+                    <span className="text-lg font-medium text-gray-700">Total Earned:</span>
+                    <span className="ml-2 text-2xl font-bold text-primary">0.05 USD</span>
+                  </div>
+                </div>
+                <button
+                    onClick={copyToClipboard}
+                    className="absolute right-2 top-11 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md flex items-center transition-colors"
+                  >
+                    <ClipboardDocumentIcon className="w-5 h-5 mr-2" />
+                    {copied ? 'Copied!' : 'Copy'}
+                  </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    ) : ""}
+    </>
   );
 };
 

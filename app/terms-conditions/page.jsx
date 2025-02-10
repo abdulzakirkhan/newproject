@@ -4,7 +4,7 @@ const page = () => {
   return (
     <>
 
-        <section className="absolute top-[94] w-full" style={{top:"94px"}}>
+        <section className="mt-20">
             <div className="container mt-10 mx-auto px-6">
                 <div className="grid md:grid-cols-12 gap-8">
                     <div className="w-full md:col-span-12">
