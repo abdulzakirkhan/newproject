@@ -186,7 +186,7 @@ export default function RootLayout({ children }) {
     
                         <div className="flex flex-col justify-center items-center py-10">
                           <button type="submit" disabled={isSubmitting} className="bg-primary w-[219] h-40 text-white px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                            {isSubmitting ? "Logging in..." : "Login"}
+                            {isSubmitting ? `${isSignUp ? "creating acoount..." :"Logging in..."}`: "Login"}
                           </button>
                         </div>
                         <div className="py-3 flex justify-between gap-4">

@@ -55,7 +55,7 @@ const page = () => {
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 1, ease: 'easeOut' }} // Add smooth transition
             >
-              <Link href="https://www.hybridresearchcenter.com/profileupdate">
+              <Link href="">
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Delete Account</p>

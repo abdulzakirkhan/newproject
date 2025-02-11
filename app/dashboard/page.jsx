@@ -42,7 +42,7 @@ const DashboardPage = () => {
               My Orders
             </motion.h2>
 
-            <div className="flex items-center wrap gap-2 lg:gap-8">
+            <div className="flex items-center wrap gap-2 lg:gap-20">
               {/* Add Order Button */}
               <motion.div
                 className="w-[120] md:w-[219] flex justify-center items-center cursor-pointer w-h40 bg-primary rounded-md btnText text-white h-[40]"
@@ -69,7 +69,7 @@ const DashboardPage = () => {
             </motion.div>
 
 
-          <div className="grid md:grid-cols-12 gap-4 py-8">
+          <div className="grid md:grid-cols-12 gap-5 py-8">
             {/* Cards */}
             <Cards cardsData={cardsData} />
           </div>

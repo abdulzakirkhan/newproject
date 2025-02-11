@@ -64,7 +64,7 @@ const Header = ({ profileName, profileImage }) => {
             </div>
           )}
         </div>
-        <span className="text-sm">Hello,user</span>
+        <span className="text-sm">Hello,User</span>
 
       </div>
     </div>
