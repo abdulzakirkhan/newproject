@@ -276,6 +276,9 @@ h3{
   padding-left: 4rem;
   padding-right: 1rem;
 }
+.custh{
+  height: 14.4rem;
+}
 @media (max-width:1000px) {
 
   .sm-screen-side-nav.h-screen{

@@ -8,9 +8,9 @@ const Cards = ({cardsData}) => {
   return (
     <>
     {cardsData.map((card, index) => (
-      <Link href={"/orders"} className='min-w w-full md:col-span-4' key={index}>
+      <Link href={"/orders"} className='min-w w-full md:col-span-4 custh' key={index}>
         <motion.div
-          className="border-2  rounded-2xl p-3 sm:px-8"
+          className="border-2 custh  rounded-2xl p-3 sm:px-8"
           key={index}
           initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and slightly below the final position
           whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position
@@ -28,7 +28,7 @@ const Cards = ({cardsData}) => {
               <Image src={card.icon} width={39} height={39} alt="" />
             </div>
           </div>
-          <div className="flex py-4 pe-14 items-center gap-4">
+          <div className="flex py-4 pe-14 items-center gap-4 flex-wrap">
             <Image src={card.statusIcon} width={12} height={12} alt={card.title} />
             <span className="text-primary">8.5%</span>
             <p className="p11 text-grey">{card.time}</p>
