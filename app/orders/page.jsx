@@ -9,7 +9,7 @@ const page = () => {
 
       <div className="container mx-auto">
         <h1 className="md:px-4 py-8">Orders</h1>
-        <div className="grid md:grid-cols-12 gap-1 lg:gap-2 lg:w-full">
+        <div className="grid md:grid-cols-12 gap-1 md:gap-6 lg:gap-8 lg:w-full">
           <Orders />
         </div>
       </div>

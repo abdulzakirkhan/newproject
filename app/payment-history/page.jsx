@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup'; // For validation
 import { motion } from 'framer-motion';
-import { paymentHistory } from '../data';
+import { paymentHistory } from '../../data';
 const page = () => {
     const [showFilters, setShowFilters] = useState(false);
 

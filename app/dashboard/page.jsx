@@ -25,7 +25,6 @@ const DashboardPage = () => {
 
   return (
     <section className={`mt-20`}>
-      {isLoggedIn ? (
         <div className="container mx-auto py-8">
           <motion.div
             className="lg:w-full flex flex-wrap justify-center sm:justify-between items-center"
@@ -76,9 +75,6 @@ const DashboardPage = () => {
           </div>
          
         </div>
-      ) : (
-        <p>Loading...</p>
-      )}
     </section>
   );
 };
