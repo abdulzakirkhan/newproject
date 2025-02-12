@@ -23,14 +23,14 @@ const Orders = () => {
               
               {/* progressbarr */}
               <div className="md:flex md:items-center md:justify-between gap-0">
-                <div className="relative size-32 lg:size-40">
-                  <svg className="size-full -rotate-90" viewBox="2 0 40 46" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="21" cy="22" r="13" fill="none" className="stroke-current text-grey dark:text-neutral-700" strokeWidth="2.7"></circle>
-                    <circle cx="21" cy="22" r="13" fill="none" className={`stroke-current ${order.status === "paid" ? "text-[#3BB537]" : order.status === "remaining" ? "text-yellow" : order.status === "unpaid" ? "text-grey" : ""} dark:text-blue-500`} strokeWidth="2.7" strokeDasharray="100" strokeDashoffset={order.remaining} strokeLinecap="round"></circle>
+                <div className="relative size-24 lg:size-36">
+                  <svg className="size-full -rotate-90" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="13" fill="none" className="stroke-current text-grey dark:text-neutral-700" strokeWidth="2.7"></circle>
+                    <circle cx="21" cy="21" r="13" fill="none" className={`stroke-current ${order.status === "paid" ? "text-[#3BB537]" : order.status === "remaining" ? "text-yellow" : order.status === "unpaid" ? "text-grey" : ""} dark:text-blue-500`} strokeWidth="2.7" strokeDasharray="100" strokeDashoffset={order.remaining} strokeLinecap="round"></circle>
                   </svg>
 
-                  <div className="absolute top-1/2 start-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                    <span className="text-center text-2xl font-bold text-black dark:text-blue-500">{order.success}%</span>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <span className="text-center text-xl font-bold text-black dark:text-blue-500">{order.success}%</span>
                   </div>
                 </div>
                 {order.status === "paid" ? (
@@ -75,7 +75,7 @@ const Orders = () => {
                     <span>Order ID:</span> <span>{order.orderId}</span>
                   </div>
                   <div className="flex p3 items-center gap-3">
-                    <span>Order placed:</span> <span>{order.orderPlace}</span>
+                    <span>Order Placed:</span> <span>{order.orderPlace}</span>
                   </div>
                   <div className="flex md:items-center gap-2">
                     <span className="p2">Deadline:</span>
@@ -89,7 +89,7 @@ const Orders = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className={`p2 ${order.status === "paid" ? "text-green" : "text-red"}`}>Status:</span>
-                    <span className={`p3 ${order.status === "paid" ? "text-green" : "text-red"}`}>{order.status}</span>
+                    <span className={`p3 capitalize ${order.status === "paid" ? "text-green" : "text-red"}`}>{order.status}</span>
                   </div>
                   {order.status === "remaining" ? (
                     <div className="flex flex-wrap items-center gap-2">

@@ -73,7 +73,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
       )}
 
       {/* Sidebar Menu Items */}
-      <nav className="mt-1 nav-items flex-grow space-y-0">
+      <nav className="mt-1 nav-items flex-grow space-y-3">
         {menuItems.map((item, index) => {
           const isActive = pathname === item.path;
           return (

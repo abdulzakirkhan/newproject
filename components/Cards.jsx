@@ -16,7 +16,7 @@ const Cards = ({cardsData}) => {
           whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position
           transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}  // Stagger the animation
         >
-          <div className="flex items-center justify-between gap-8 py-4">
+          <div className="flex items-center justify-between gap-6 pt-6">
             <div className="flex flex-col gap-6">
               <p className="p1 text-grey">{card.title}</p>
               <h1 className="font-bold text-5xl">{card.count}</h1>

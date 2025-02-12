@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup'; // For validation
 import { motion } from 'framer-motion';
-import { paymentHistory } from '../../data';
+import { paymentHistory } from '../data';
 const page = () => {
     const [showFilters, setShowFilters] = useState(false);
 
@@ -125,82 +125,52 @@ const page = () => {
 
 
         <div className="container mx-auto md:px-6 mt-10">
-            <div className="grid md:grid-cols-12 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {paymentHistory.map((payment, index) => (
+                <motion.div
+                  className="border-2 p-6 rounded-lg shadow-sm bg-white min-h-[180px]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5 }}
+                  key={index}
+                >
+                  {/* Order ID & Price */}
+                  <div className="flex justify-between items-center mb-4">
+                    <p className="text-sm text-gray-600">Order ID: <span className="font-semibold">{payment.orderId}</span></p>
+                    <h2 className="font-bold text-lg">{payment.price}</h2>
+                  </div>
 
-                {paymentHistory.map((payment,index) => (
+                  {/* Payment Source */}
+                  <p className="text-gray-700 text-sm mb-3">
+                    Payment Source: <b>{payment.paySource}</b>
+                  </p>
 
-                    <motion.div
-                        className="w-full md:col-span-4 border-2 p-5 rounded-lg"
-                        initial={{ opacity: 0, y: 20 }} // Initial state of the component (invisible and slightly below)
-                        animate={{ opacity: 1, y: 0 }}   // Final state (visible and in its normal position)
-                        exit={{ opacity: 0, y: 20 }}     // When exiting, it'll slide down and fade out
-                        transition={{ duration: 0.5 }} 
-                        key={index}  // Duration of the animation
-                        >
-                        <div className="flex justify-between items-center">
-                            <p className="p1">Order Id: {payment.orderId}</p>
-                            <h2>{payment.price}</h2>
-                        </div>
+                  {/* Payment Method Section */}
+                  <div className="bg-gray-100 p-4 rounded-lg space-y-2">
+                    <h3 className="font-semibold text-gray-800">Wallet</h3>
+                    <p className="text-sm">
+                      Includes Reward Amount: <span className="font-semibold">{payment.includeRewards}</span>
+                    </p>
+                    <p className="text-sm">
+                      Wallet Amount: <span className="font-semibold">{payment.walletAmount}</span>
+                    </p>
+                  </div>
 
-                        <div className="">
-                            <p>
-                            Payment Source: <b>{payment.paySource}</b>
-                            </p>
-                        </div>
-
-                        <div className="py-3">
-                            <h2>Payment Method:</h2>
-                        </div>
-
-                        {/* Wallet Section with Hover animation */}
-                        <motion.div
-                            className="bg-[#E8EBEB] px-6 py-7 rounded-lg mt-5"
-                            initial={{ opacity: 0, y: 10 }} // Start slightly below and invisible
-                            animate={{ opacity: 1, y: 0 }}   // Final state: visible and normal position
-                            whileHover={{ scale: 1.05 }}      // Slightly scale up on hover
-                            transition={{ duration: 0.5 }}    // Duration of animation
-                        >
-                            <h2>Wallet</h2>
-                            <p>
-                            <span>Includes Reward Amount:</span>{payment.includeRewards}
-                            </p>
-                            <span>& Wallet Amount</span>
-                            <br />
-                            <span>{payment.walletAmount}</span>
-
-                            <div className="flex justify-end">
-                            <span>
-                                <b>0</b>
-                            </span>
-                            </div>
-                        </motion.div>
-
-                        {/* Debit or Credit Card Section with Hover animation */}
-                        <motion.div
-                            className="bg-[#E8EBEB] px-6 py-7 rounded-lg mt-5"
-                            initial={{ opacity: 0, y: 10 }} // Start slightly below and invisible
-                            animate={{ opacity: 1, y: 0 }}   // Final state: visible and normal position
-                            whileHover={{ scale: 1.05 }}      // Slightly scale up on hover
-                            transition={{ duration: 0.5 }}    // Duration of animation
-                        >
-                            <h2>Debit or Credit Card</h2>
-                            <p>
-                            <span>Includes Service Charges: </span>0.00
-                            </p>
-                            <span>& VAT:</span>
-                            <span>0.00</span>
-
-                            <div className="flex justify-end">
-                            <span>
-                                <b>0</b>
-                            </span>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                ))}
-
-            
+                  {/* Debit or Credit Card Section */}
+                  <div className="bg-gray-100 p-4 rounded-lg mt-4 space-y-2">
+                    <h3 className="font-semibold text-gray-800">Debit or Credit Card</h3>
+                    <p className="text-sm">
+                      Includes Service Charges: <span className="font-semibold">0.00</span>
+                    </p>
+                    <p className="text-sm">
+                      VAT: <span className="font-semibold">0.00</span>
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
+
         </div>
 
     </section>

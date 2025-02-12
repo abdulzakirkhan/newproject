@@ -2,9 +2,10 @@
 import { motion } from 'framer-motion'; // Import framer-motion
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
+  const [showModal, setShowModal] = useState(false)
   return (
     <>
       <section className="mt-20">
@@ -55,7 +56,7 @@ const page = () => {
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 1, ease: 'easeOut' }} // Add smooth transition
             >
-              <Link href="">
+              <Link href="" onClick={() => setShowModal(!showModal)}>
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Delete Account</p>
@@ -66,6 +67,7 @@ const page = () => {
                 </div>
               </Link>
             </motion.div>
+
 
           </div>
         </div>

@@ -42,10 +42,10 @@ const DashboardPage = () => {
               My Orders
             </motion.h2>
 
-            <div className="flex items-center wrap gap-2 lg:gap-20">
+            <div className="flex items-center wrap gap-4 mt-4 mb-2 lg:gap-12">
               {/* Add Order Button */}
               <motion.div
-                className="w-[120] md:w-[219] flex justify-center items-center cursor-pointer w-h40 bg-primary rounded-md btnText text-white h-[40]"
+                className="w-219 flex justify-center items-center cursor-pointer w-h40 bg-primary hover:bg-primary-dark transition-colors rounded-md btnText text-white h-[40]"
                 initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
                 whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}  // Delay for staggered effect
@@ -57,7 +57,7 @@ const DashboardPage = () => {
 
               {/* Filter Button */}
               <motion.button
-                className="bg-orange btnText text-white rounded-md w-h104 w-[104] h-[40] flex justify-center items-center gap-2"
+                className="bg-orange w-219 btnText text-white rounded-md w-h104 w-[104] hover:bg-primary-dark transition-colors h-[40] flex justify-center items-center gap-2"
                 initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
                 whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}  // Delay for staggered effect
