@@ -170,7 +170,7 @@ const page = () => {
                                     <h2 className="text-xl font-semibold text-center">Top-Up Wallet</h2>
                                 </div>
                                 <div className="text-center p-3 flex flex-col justify-center items-center">
-                                    <h3>How do You want to top-up wallet?</h3>
+                                    <h3>How do you want to top up your wallet?</h3>
                                     <div className="flex justify-between items-center py-3 gap-3">
                                         <Link href={"/bank-transfer"} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</Link>
                                         <button onClick={() => setIsPaymentGateway(true)} className="bg-primary text-white px-3 py-2 rounded-lg">With Payment Gateway</button>
