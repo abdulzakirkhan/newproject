@@ -1,15 +1,12 @@
 export const cardsData=[
     {
         id:1,
-<<<<<<< HEAD
         title:"Total Order",
-=======
         title:"Total Orders",
->>>>>>> c89e406 (final)
         count:0,
         time:"Up from yesterday",
         percentage:"8.5%",
-        icon:"/home/icons/orders.svg",
+        icon:"/home/icons/orders.png",
         bg:"/home/primarybg.svg",
         statusIcon:"/icons/home/up.svg"
     },
@@ -19,7 +16,7 @@ export const cardsData=[
         count:0,
         time:"Up from past week",
         percentage:"1.3%",
-        icon:"/home/icons/progress.svg",
+        icon:"/home/icons/progress.png",
         bg:"/home/orange.svg",
         statusIcon:"/icons/home/progress.svg"
     },
@@ -29,7 +26,7 @@ export const cardsData=[
         count:0,
         time:"Up from Yesterday",
         percentage:"1.8%",
-        icon:"home/icons/completed.svg",
+        icon:"/home/icons/completed.png",
         bg:"/home/green.svg",
         statusIcon:"/icons/home/completed.svg"
     },

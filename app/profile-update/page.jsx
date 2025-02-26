@@ -1,8 +1,4 @@
 "use client"
-<<<<<<< HEAD
-=======
-import { FaArrowLeftLong } from "react-icons/fa6";
->>>>>>> c89e406 (final)
 import React, { useState } from 'react';
 import { useFormik } from 'formik'; // Import Formik
 import * as Yup from 'yup'; // Import Yup for validation
@@ -10,10 +6,7 @@ import { motion } from 'framer-motion'; // Import framer-motion for animations
 import Image from 'next/image';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
->>>>>>> c89e406 (final)
 const Page = () => {
   const [image, setImage] = useState(null); // State to store the image preview URL
 const [value, setValue] = useState("");
@@ -43,10 +36,7 @@ const [value, setValue] = useState("");
   return (
     <>
       <section className="mt-20">
-<<<<<<< HEAD
-=======
         <Link href={"/account-setting"} className="flex items-center gap-2 hover:text-[#312E81]"><FaArrowLeftLong /> Back</Link>
->>>>>>> c89e406 (final)
         <div className="container mx-auto px-0 md:px-6 py-8">
           <div className="flex justify-center">
             <motion.div
@@ -104,13 +94,8 @@ const [value, setValue] = useState("");
                   <input
                     type="text"
                     id="fullName"
-<<<<<<< HEAD
                     name="fullName"
                     className="w-full p-3 border border-gray-300 rounded-md"
-=======
-                    name="fullName" placeholder="Enter Your Name"
-                    className="w-full p-3 border text-md placeholder:text-sm border-gray-300 rounded-md"
->>>>>>> c89e406 (final)
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.fullName}
@@ -130,13 +115,10 @@ const [value, setValue] = useState("");
                   <input
                     type="text"
                     id="email"
-<<<<<<< HEAD
                     name="email"
                     className="w-full p-3 border border-gray-300 rounded-md"
-=======
                     name="email" placeholder="Enter your Email"
                     className="w-full p-3 border placeholder:text-sm border-gray-300 rounded-md"
->>>>>>> c89e406 (final)
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}

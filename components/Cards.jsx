@@ -10,11 +10,7 @@ const Cards = ({cardsData}) => {
     {cardsData.map((card, index) => (
       <Link href={"/orders"} className='min-w w-full md:col-span-4 custh' key={index}>
         <motion.div
-<<<<<<< HEAD
           className="border-2 custh  rounded-2xl p-3 sm:px-8"
-=======
-          className="border-2 h-full  rounded-2xl p-3 sm:px-8"
->>>>>>> c89e406 (final)
           key={index}
           initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and slightly below the final position
           whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position
@@ -29,7 +25,7 @@ const Cards = ({cardsData}) => {
               className="bg-no-repeat bg-cover bg-center w-77 w-[77] h-[77] flex justify-center items-center"
               style={{ backgroundImage: `url(${card.bg})` }}
             >
-              <Image src={card.icon} width={39} height={39} alt="" />
+              <Image src={card.icon} width={index === 0 ? 39 : 60} height={39} alt="" />
             </div>
           </div>
           <div className="flex py-4 pe-14 items-center gap-4 flex-wrap">

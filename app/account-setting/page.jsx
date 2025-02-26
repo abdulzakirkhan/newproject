@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'; // Import framer-motion
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-
+import { MdDelete } from "react-icons/md";
 const page = () => {
   const [showModal, setShowModal] = useState(false)
   return (
@@ -13,11 +13,8 @@ const page = () => {
           <div className="grid md:grid-cols-12 gap-4">
             {/* Card 1 - Personal Information */}
             <motion.div
-<<<<<<< HEAD
-              className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
-=======
               className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
->>>>>>> c89e406 (final)
+
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.6, ease: 'easeOut' }} // Add smooth transition
@@ -36,11 +33,7 @@ const page = () => {
 
             {/* Card 2 - Update Password */}
             <motion.div
-<<<<<<< HEAD
-              className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
-=======
               className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
->>>>>>> c89e406 (final)
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.8, ease: 'easeOut' }} // Add smooth transition
@@ -49,7 +42,7 @@ const page = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Update Password</p>
-                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
+                    <div className="bg-[#FFF1DB] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
                       <Image src={"/account/key.png"} width={50} height={40} alt="user information" />
                     </div>
                   </div>
@@ -59,11 +52,7 @@ const page = () => {
 
             {/* Card 3 - Delete Account */}
             <motion.div
-<<<<<<< HEAD
-              className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
-=======
               className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
->>>>>>> c89e406 (final)
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 1, ease: 'easeOut' }} // Add smooth transition
@@ -72,8 +61,9 @@ const page = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-center">
                     <p className='p1 text-grey'>Delete Account</p>
-                    <div className="bg-[#E8E8FF] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
-                      <Image src={"/account/bin.png"} width={50} height={40} alt="user information" />
+                    <div className="bg-[#FFDCDC] h-[80] w-[80] flex flex-col justify-center items-center rounded-xl" style={{width:"80px",height:"80px"}}>
+                      {/* <Image src={"/account/bin_red.png"} width={50} height={40} alt="user information" /> */}
+                      <MdDelete  size={55} className='text-red' />
                     </div>
                   </div>
                 </div>

@@ -38,21 +38,13 @@ const Header = ({ profileName, profileImage }) => {
       <div className="relative lg:w-1/4 flex items-center">
         <input
           type="text"
-<<<<<<< HEAD
           placeholder="Search..."
-=======
-          placeholder="Search Order by Id"
->>>>>>> c89e406 (final)
           className="pl-10  pr-4 py-2 w-[90%] md:w-full rounded-md bg-[#FFFFFF] text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <HiSearch className="absolute right-8 md:right-3 text-gray-400" size={20} />
       </div>
 
-<<<<<<< HEAD
       <div className="flex items-center md:space-x-3">
-=======
-      <div className="flex items-center paddinCustomMediumDevices md:space-x-3">
->>>>>>> c89e406 (final)
 
         <div className="relative">
           <img

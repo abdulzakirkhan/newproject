@@ -281,14 +281,9 @@ h3{
 }
 
 
-<<<<<<< HEAD
-
-=======
 .shadowCustomClass{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
->>>>>>> c89e406 (final)
-
 
 @media (max-width:1000px) {
 
@@ -352,24 +347,18 @@ h3{
   }
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 768px){
   .paddinCustomMediumDevices{
     padding-right: 12px;
   }
 }
->>>>>>> c89e406 (final)
 @media (min-width: 1010px) and (max-width: 1400px) {
   .p{
     padding-left: 4rem !important;
   }
 }
-<<<<<<< HEAD
-=======
 @media (min-width: 768px) and (max-width: 1200px) {
   .custh{
     height: 17rem !important;
   }
 }
->>>>>>> c89e406 (final)

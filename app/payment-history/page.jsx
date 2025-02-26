@@ -60,7 +60,7 @@ const page = () => {
                       <Field
                         type="text"
                         id="searchId"
-                        name="searchId"
+                        name="searchId" placeholder="Search Order By Id"
                         className="mt-1 p-2 border rounded-md w-full"
                       />
                       <ErrorMessage
@@ -107,14 +107,14 @@ const page = () => {
                     </div>
 
                     {/* Submit Button */}
-                    {/* <div className="flex justify-end mt-4">
+                    <div className="mt-4 w-full md:col-span-2 flex justify-center items-center">
                       <button
                         type="submit"
-                        className="bg-[#312E81] text-white text-btnText w-[219px] h-[40px] rounded-lg"
+                        className="bg-[#312E81] py-2 px-6 mt-5 text-white text-btnText rounded-lg"
                       >
-                        Apply Filters
+                        Search
                       </button>
-                    </div> */}
+                    </div>
                   </Form>
                   </div>
                 </Formik>

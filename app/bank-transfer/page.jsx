@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React, { useState } from 'react';
@@ -124,7 +123,6 @@ const Page = () => {
 };
 
 export default Page;
-=======
 // "use client"
 
 // import React, { useState } from 'react';
@@ -252,4 +250,3 @@ export default Page;
 // };
 
 // export default Page;
->>>>>>> c89e406 (final)

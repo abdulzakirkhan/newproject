@@ -1,18 +1,8 @@
 "use client";
 
-<<<<<<< HEAD
 import { useState } from "react";
-=======
-import {useState } from "react";
->>>>>>> c89e406 (final)
 import {
   FaBars,
-  FaUser,
-  FaChartBar,
-  FaWallet,
-  FaCommentDots,
-  FaGift,
-  FaFileContract,
   FaSignOutAlt,
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
@@ -20,43 +10,29 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
-<<<<<<< HEAD
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-=======
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
->>>>>>> c89e406 (final)
-  const [showPopUp, setShowPopUp] = useState(false)
+  const [showPopUp, setShowPopUp] = useState(false);
   const pathname = usePathname();
+
   const menuItems = [
     { title: "Dashboard", path: "/dashboard", icon: "/dashboard.png" },
     { title: "Orders", path: "/orders", icon: "/icons/sidebar/orders.svg" },
     { title: "Payment History", path: "/payment-history", icon: "/icons/sidebar/payment.svg" },
-<<<<<<< HEAD
     { title: "Wallet", path: "/wallet", icon: "/icons/sidebar/wallet.svg" },
-=======
-    { title: "Wallet", path: "/wallet" , icon: "/icons/sidebar/wallet.svg" },
->>>>>>> c89e406 (final)
     { title: "Chat", path: "/app-chatt", icon: "/icons/sidebar/chatt.svg" },
     { title: "Rewards", path: "/rewards", icon: "/icons/sidebar/rewards.svg" },
     { title: "Terms & Conditions", path: "/terms-conditions", icon: "/icons/sidebar/terms.svg" },
     { title: "Account Setting", path: "/account-setting", icon: "/user.png" },
   ];
 
-  const handleClick = () => {
-    setShowPopUp(!showPopUp)
-  }
-<<<<<<< HEAD
-=======
+  const handleClick = () => setShowPopUp(!showPopUp);
 
-
-
-  
->>>>>>> c89e406 (final)
   return (
     <div
       className={`bg-gray-900 sm-screen-side-nav h-screen text-white fixed left-0 z-50 flex flex-col transition-all duration-1000 md:duration-1000 ${
         isCollapsed ? "w-10 md:w-16" : "w-52"
-      }`} style={{top:"75px"}}
+      }`}
+      style={{ top: "75px" }}
     >
       {/* Sidebar Toggle Button */}
       <div className="flex justify-end">
@@ -74,82 +50,56 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
             width={80}
             height={80}
             className="rounded-full mx-auto cursor-pointer"
-<<<<<<< HEAD
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-=======
-            // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
->>>>>>> c89e406 (final)
           />
           <h2 className="text-lg text-white flex justify-center font-bold mt-2">Hello, User</h2>
         </div>
       )}
-
-      {/* Dropdown Menu */}
-<<<<<<< HEAD
-      {isDropdownOpen && (
-=======
-      {/* {isDropdownOpen && (
->>>>>>> c89e406 (final)
-        <div className="absolute top-36 left-16 mt-2 bg-white text-black rounded-md shadow-md">
-          <ul>
-            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Profile</li>
-            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Settings</li>
-            <li className="px-4 py-2 cursor-pointer hover:bg-gray-300">Logout</li>
-          </ul>
-        </div>
-<<<<<<< HEAD
-      )}
-=======
-      )} */}
->>>>>>> c89e406 (final)
 
       {/* Sidebar Menu Items */}
       <nav className="mt-1 nav-items flex-grow space-y-3">
         {menuItems.map((item, index) => {
           const isActive = pathname === item.path;
           return (
-            <Link key={index} href={item.path} className={`flex items-center px-4 py-2 ${isActive ? "bg-gray-700" : "hover:bg-gray-700"} transition`}>
+            <Link
+              key={index}
+              href={item.path}
+              className={`flex items-center px-4 py-2 ${isActive ? "bg-gray-700" : "hover:bg-gray-700"} transition`}
+            >
               <Image src={item.icon} width={18} height={18} alt={item.title} className="mr-4" />
               {!isCollapsed && <span>{item.title}</span>}
             </Link>
-          )
-      })}
-        {/* Logout Section */}
-      <div className="px-2 md:mt-1">
-        <button onClick={handleClick} className="flex text-white items-center space-x-4 hover:bg-red-700 p-2 rounded">
-          <FaSignOutAlt size={16} className="text-white" />
-          {!isCollapsed && <span className="text-white">Logout</span>}
-        </button>
-      </div>
+          );
+        })}
+
+        {/* Logout Button */}
+        <div className="px-2 md:mt-1">
+          <button onClick={handleClick} className="flex text-white items-center space-x-4 hover:bg-red-700 p-2 rounded">
+            <FaSignOutAlt size={16} className="text-white" />
+            {!isCollapsed && <span className="text-white">Logout</span>}
+          </button>
+        </div>
       </nav>
 
+      {/* Logout Confirmation Modal */}
       {showPopUp && (
-<<<<<<< HEAD
-        <div className="fixed rounded-lg flex border-2 flex-col shadow-xl items-center gap-2 w-1/3 backdrop-blur-xl p-3 md:p-6" style={{top:"30%",left:"40%"}}>
-          <h1 className="text-black">Confirm Logout</h1>
-          <h3 className="text-black">Are you sure you want to logout?</h3>
-          <div className="flex items-center gap-4">
-            <button onClick={handleClick} className="text-black px-6 py-2 rounded-md border-2">Cancel</button>
-            <button className="px-6 py-2 rounded-md text-white bg-[#DC3545] ">Log Out</button>
+        <div className="fixed inset-0 flex justify-center items-center" onClick={() => setShowPopUp(false)}>
+          <div
+            className="fixed rounded-lg flex border-2 flex-col shadow-xl items-center gap-2 w-1/3 backdrop-blur-xl p-3 md:p-6"
+            style={{ top: "30%", left: "40%" }}
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+          >
+            <h1 className="text-black">Confirm Logout</h1>
+            <h3 className="text-black">Are you sure you want to logout?</h3>
+            <div className="flex items-center gap-4">
+              <button onClick={handleClick} className="text-black px-6 bg-white py-2 rounded-md border-2 border-gray-500">
+                Cancel
+              </button>
+              <button className="px-6 py-2 rounded-md text-white bg-[#DC3545]">Log Out</button>
+            </div>
           </div>
         </div>
-=======
-         <div
-         className="fixed inset-0 flex justify-center items-center"
-         onClick={() => setShowPopUp(false)} // Close modal when clicking outside
-       >
-        <div className="fixed rounded-lg flex border-2 flex-col shadow-xl items-center gap-2 w-1/3 backdrop-blur-xl p-3 md:p-6" style={{top:"30%",left:"40%"}} onClick={() => setShowPopUp(false)}>
-          <h1 className="text-black">Confirm Logout</h1>
-          <h3 className="text-black">Are you sure you want to logout?</h3>
-          <div className="flex items-center gap-4">
-            <button onClick={handleClick} className="text-black px-6 bg-white py-2 rounded-md border-2 border-gray-500">Cancel</button>
-            <button onClick={handleClick} className="px-6 py-2 rounded-md text-white bg-[#DC3545] ">Log Out</button>
-          </div>
-        </div>
-        </div>
->>>>>>> c89e406 (final)
       )}
-      
     </div>
   );
 };

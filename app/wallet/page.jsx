@@ -2,19 +2,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MdPayment } from "react-icons/md";
-<<<<<<< HEAD
-=======
 import { FaArrowLeftLong } from "react-icons/fa6";
->>>>>>> c89e406 (final)
 import React, { useState } from 'react'
 import { FaInfoCircle } from 'react-icons/fa'; 
 const page = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isPaymentGateway, setIsPaymentGateway] = useState(false)
-<<<<<<< HEAD
-=======
-    const [isBank, setIsBank] = useState(false)
->>>>>>> c89e406 (final)
     const [addCard, setAddCard] = useState(false)
     const [amount, setAmount] = useState(0)
     // Function to open the modal
@@ -28,8 +21,6 @@ const page = () => {
     const handleViewModal = () => {
         setAddCard(!addCard)
     }
-<<<<<<< HEAD
-=======
 
 
 
@@ -49,7 +40,6 @@ const page = () => {
         e.preventDefault();
         alert(`Top-up of $${amount} submitted!`);
       };
->>>>>>> c89e406 (final)
   return (
     <>
         <section className="mt-20">
@@ -174,10 +164,7 @@ const page = () => {
 
                 </div>
               
-<<<<<<< HEAD
-            ) : (
-=======
-            ) : isBank ? ( <section>
+            ) :  isBank ? ( <section>
                 <button className="flex items-center gap-2 hover:text-[#312E81]" onClick={() => setIsBank(false)}> <FaArrowLeftLong /> Back</button>
                 <div className="container py-8 mx-auto px-6 flex flex-col justify-center items-center">
                   {/* Heading with fade-in animation */}
@@ -274,7 +261,6 @@ const page = () => {
                   </div>
                 </div>
               </section>): (
->>>>>>> c89e406 (final)
                 <div className="container mx-auto px-6 mt-8">
                     <div className="grid md:grid-cols-12">
                         <div className="w-full md:col-span-12">
@@ -302,12 +288,7 @@ const page = () => {
                                 <div className="text-center p-3 flex flex-col justify-center items-center">
                                     <h3>How do you want to top up your wallet?</h3>
                                     <div className="flex justify-between items-center py-3 gap-3">
-<<<<<<< HEAD
                                         <Link href={"/bank-transfer"} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</Link>
-=======
-                                        {/* <Link href={"/bank-transfer"} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</Link> */}
-                                        <button onClick={() => setIsBank(true)} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</button>
->>>>>>> c89e406 (final)
                                         <button onClick={() => setIsPaymentGateway(true)} className="bg-primary text-white px-3 py-2 rounded-lg">With Payment Gateway</button>
                                     </div>
                                 </div>
@@ -319,7 +300,6 @@ const page = () => {
                     <div className="grid md:grid-cols-12 gap-6 mt-10">
                         <div className="w-full md:col-span-6">
                             <div className="p-6 h-full border-2 rounded-2xl shadow-xl">
-<<<<<<< HEAD
                                 <h1>Available Credit</h1>
                                 <p className="p3 py-2">Rewards Amount: USD 0.05</p>
                                 <p className="p3 py-2">Wallet Amount: USD 0.00</p>
@@ -332,7 +312,6 @@ const page = () => {
                                 <FaInfoCircle className="-mt-2" style={{fontSize:"45px"}} />
                                 <p className="text-xl m-0"> With Bank Transfer Pay,You Will Receive The Wallet amount after a 4% deduction as a services fee, while with Payment Gateway, you will receive the wallet amount after a 24% deduction ,which includes a 4% service s fee and s 20% VAT.</p>
                             </div>
-=======
                                 <h1 className="text-xl font-bold mb-4">Available Credit</h1>
                                 <p className="text-base text-gray-700 py-2">Rewards Amount: <span className="font-semibold">USD 0.05</span></p>
                                 <p className="text-base text-gray-700 py-2">Wallet Amount: <span className="font-semibold">USD 0.00</span></p>
@@ -348,7 +327,6 @@ const page = () => {
                                         With Bank Transfer Pay, you will receive the wallet amount after a 4% deduction as a service fee, while with Payment Gateway, you will receive the wallet amount after a 24% deduction, which includes a 4% service fee and a 20% VAT.
                                     </p>
                                 </div>
->>>>>>> c89e406 (final)
                             </div>
                         </div>
                     </div>
@@ -357,10 +335,7 @@ const page = () => {
                     </div> */}
                 </div>
             )}
-<<<<<<< HEAD
-=======
             
->>>>>>> c89e406 (final)
         </section>
     </>
   )

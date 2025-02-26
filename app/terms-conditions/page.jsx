@@ -53,10 +53,12 @@ const page = () => {
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="">
-                {section.icon}
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                  {section.title}
-                </h2>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {section.title}
+                  </h2>
+                  {section.icon}
+                </div>
                 <p className="text-gray-600 leading-relaxed">
                   {section.content}
                 </p>
