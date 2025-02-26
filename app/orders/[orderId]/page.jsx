@@ -1,5 +1,9 @@
 "use client";
+<<<<<<< HEAD
 
+=======
+import { FaArrowLeftLong } from "react-icons/fa6";
+>>>>>>> c89e406 (final)
 import React, { useState } from 'react';
 import { ordersData } from '../../data';
 import Image from 'next/image';
@@ -48,6 +52,10 @@ const OrderDetail = ({ params }) => {
     if (summaryTab === "summary") {
       return (
         <div className="mt-20">
+<<<<<<< HEAD
+=======
+          <button onClick={() => setSummaryTab(null)} className="flex my-4 items-center gap-2 hover:text-[#312E81]"><FaArrowLeftLong /> Back</button>
+>>>>>>> c89e406 (final)
             <div className="grid md:grid-cols-12 justify-items-center gap-8 items-center">
               <div className="w-full md:col-span-5">
                 <div className="border-2 p-5 rounded-xl h-60">
@@ -139,6 +147,10 @@ const OrderDetail = ({ params }) => {
             {/* Display Checkout Page if showCheckout is true */}
             {showCheckout ? (
                 <div className="mt-20">
+<<<<<<< HEAD
+=======
+                  <button onClick={() => setShowCheckout(false)} className="flex my-4 items-center gap-2 hover:text-[#312E81]"><FaArrowLeftLong /> Back</button>
+>>>>>>> c89e406 (final)
                   <div className="container">
                     <h2>Select Payment Method</h2>
                     <div className="grid md:grid-cols-3 gap-4 py-12">
@@ -257,7 +269,11 @@ const OrderDetail = ({ params }) => {
                                   </div>
                                 </div>
                                 <div className="text-center py-4">
+<<<<<<< HEAD
                                   <button type='button' className="text-white px-6 py-2 rounded-lg bg-primary" onClick={() => setSummaryTab(true)}>Pay Now</button>
+=======
+                                  <button type='button' className="text-white px-6 py-2 rounded-lg bg-primary" onClick={() => setSummaryTab("summary")}>Pay Now</button>
+>>>>>>> c89e406 (final)
                                 </div>
                              </div>
                             )}
@@ -381,7 +397,11 @@ const OrderDetail = ({ params }) => {
                               <div className="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35" height="35">
                                   <circle cx="50" cy="50" r="45" fill="#312E81" />
+<<<<<<< HEAD
                                   <text x="50" y="55" fontFamily="Arial" font-size="20" fill="white" text-anchor="middle">STRIPE</text>
+=======
+                                  <text x="50" y="55" fontFamily="Arial" fontSize="20" fill="white" text-anchor="middle">STRIPE</text>
+>>>>>>> c89e406 (final)
                                 </svg>
                                 <p className="p1 text-grey">Payment Gateway</p>
                               </div>

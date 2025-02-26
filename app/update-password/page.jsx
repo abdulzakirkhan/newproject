@@ -4,7 +4,12 @@ import { useFormik } from 'formik'; // Import Formik
 import * as Yup from 'yup'; // Import Yup for validation
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { motion } from 'framer-motion'; // Import framer-motion for animations
+<<<<<<< HEAD
 
+=======
+import { FaArrowLeftLong } from "react-icons/fa6";
+import Link from 'next/link';
+>>>>>>> c89e406 (final)
 const Page = () => {
   const [oldPasswordVisible, setOldPasswordVisible] = useState(false);
   const [newPasswordVisible, setNewPasswordVisible] = useState(false);
@@ -36,6 +41,10 @@ const Page = () => {
   return (
     <>
       <section className="mt-20" style={{top:"75px"}}>
+<<<<<<< HEAD
+=======
+      <Link href={"/account-setting"} className="flex items-center gap-2 hover:text-[#312E81]"><FaArrowLeftLong /> Back</Link>
+>>>>>>> c89e406 (final)
         <div className="container mx-auto px-2 md:px-6 py-8">
           <div className="flex justify-center">
             <motion.div

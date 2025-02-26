@@ -13,7 +13,11 @@ const page = () => {
           <div className="grid md:grid-cols-12 gap-4">
             {/* Card 1 - Personal Information */}
             <motion.div
+<<<<<<< HEAD
               className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
+=======
+              className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
+>>>>>>> c89e406 (final)
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.6, ease: 'easeOut' }} // Add smooth transition
@@ -32,7 +36,11 @@ const page = () => {
 
             {/* Card 2 - Update Password */}
             <motion.div
+<<<<<<< HEAD
               className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
+=======
+              className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
+>>>>>>> c89e406 (final)
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 0.8, ease: 'easeOut' }} // Add smooth transition
@@ -51,7 +59,11 @@ const page = () => {
 
             {/* Card 3 - Delete Account */}
             <motion.div
+<<<<<<< HEAD
               className="w-full md:col-span-4 bg-[#FFFFFF] shadow-2xl rounded-xl"
+=======
+              className="w-full md:col-span-4 bg-[#FFFFFF] shadowCustomClass rounded-xl"
+>>>>>>> c89e406 (final)
               initial={{ opacity: 0, x: -100 }} // Start off-screen
               animate={{ opacity: 1, x: 0 }} // Move to its final position
               transition={{ duration: 1, ease: 'easeOut' }} // Add smooth transition

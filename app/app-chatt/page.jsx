@@ -31,7 +31,11 @@ const Page = () => {
   return (
     <>
       <section className="mt-20">
+<<<<<<< HEAD
         <div className="bg-[#4B67DB] fixed w-full" style={{top:"75px"}}>
+=======
+        <div className="bg-[#4B67DB] mt-4 w-full">
+>>>>>>> c89e406 (final)
           <div className="container mx-auto px-6 py-2">
             <h2 className="text-white">Customer Support</h2>
           </div>
@@ -65,8 +69,13 @@ const Page = () => {
           </div>
 
           {/* Input area fixed at the bottom */}
+<<<<<<< HEAD
           <div className="fixed bottom-0 w-full md:w-[92%] bg-white p-4 border-t-2">
             <div className="flex flex-wrap w-full items-center gap-3 space-x-4">
+=======
+          <div className="fixed bottom-0 w-full md:w-[80%] bg-white p-4 border-t-2">
+            <div className="flex w-full items-center gap-3 space-x-4">
+>>>>>>> c89e406 (final)
               <button className="bg-primary px-5 py-2 rounded-lg text-white">
                 <FaPaperclip className="text-2xl cursor-pointer" />
               </button>

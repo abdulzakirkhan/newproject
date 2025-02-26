@@ -2,11 +2,19 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MdPayment } from "react-icons/md";
+<<<<<<< HEAD
+=======
+import { FaArrowLeftLong } from "react-icons/fa6";
+>>>>>>> c89e406 (final)
 import React, { useState } from 'react'
 import { FaInfoCircle } from 'react-icons/fa'; 
 const page = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isPaymentGateway, setIsPaymentGateway] = useState(false)
+<<<<<<< HEAD
+=======
+    const [isBank, setIsBank] = useState(false)
+>>>>>>> c89e406 (final)
     const [addCard, setAddCard] = useState(false)
     const [amount, setAmount] = useState(0)
     // Function to open the modal
@@ -20,6 +28,28 @@ const page = () => {
     const handleViewModal = () => {
         setAddCard(!addCard)
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+      const [amountBank, setAmountBank] = useState('');
+      const [selectedAmount, setSelectedAmount] = useState('');
+    
+      // Function to handle the button click and update the input
+      const handleButtonClick = (value) => {
+        setAmount(value); // Update input field with the selected value
+        setSelectedAmount(value); // Save the selected amount
+      };
+    
+      // Function to handle form submission
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`Top-up of $${amount} submitted!`);
+      };
+>>>>>>> c89e406 (final)
   return (
     <>
         <section className="mt-20">
@@ -144,7 +174,107 @@ const page = () => {
 
                 </div>
               
+<<<<<<< HEAD
             ) : (
+=======
+            ) : isBank ? ( <section>
+                <button className="flex items-center gap-2 hover:text-[#312E81]" onClick={() => setIsBank(false)}> <FaArrowLeftLong /> Back</button>
+                <div className="container py-8 mx-auto px-6 flex flex-col justify-center items-center">
+                  {/* Heading with fade-in animation */}
+                  <motion.h1
+                    className="w-1/2 py-3 text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
+                    Bank Transfer
+                  </motion.h1>
+        
+                  <div className="grid grid-cols-1 md:w-1/2">
+                    <div className="w-full md:col-span-12">
+        
+                      <div className="flex w-full justify-center space-y-3 items-center space-x-4 md:space-x-12 mb-4">
+                        {/* Buttons with fade-in and scale-up animation on click */}
+                        <motion.button
+                          onClick={() => handleButtonClick('100')}
+                          className="bg-primary text-white px-6 mt-2 md:mt-2 md:ms-0 py-3 rounded-lg hover:bg-purple-950"
+                          whileTap={{ scale: 0.95 }} // Scale effect when clicked
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          $100
+                        </motion.button>
+        
+                        <motion.button
+                          onClick={() => handleButtonClick('200')}
+                          className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-purple-950"
+                          whileTap={{ scale: 0.95 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          $200
+                        </motion.button>
+        
+                        <motion.button
+                          onClick={() => handleButtonClick('300')}
+                          className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-purple-950"
+                          whileTap={{ scale: 0.95 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.5 }}
+                        >
+                          $300
+                        </motion.button>
+                      </div>
+        
+                      {/* Input field with fade-in animation */}
+                      <motion.div
+                        className="mb-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7 }}
+                      >
+                        <label htmlFor="amountBank" className="block text-sm font-medium text-gray-700">
+                          Top up Amount:
+                        </label>
+                        <input
+                          type="number"
+                          id="amount"
+                          value={amountBank}
+                          onChange={(e) => setAmountBank(e.target.value)} // Allows manual input
+                          className="mt-2 p-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          placeholder="Enter custom amount"
+                        />
+                      </motion.div>
+        
+                      {/* Display the selected amount with fade-in */}
+                      {selectedAmount && (
+                        <motion.p
+                          className="text-xl font-medium mb-4"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.7 }}
+                        >
+                          You selected: <b>${selectedAmount}</b>
+                        </motion.p>
+                      )}
+        
+                      {/* Submit Button with bounce effect on hover */}
+                      <motion.button
+                        onClick={handleSubmit}
+                        className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-green-600"
+                        whileHover={{ scale: 1.05 }} // Slight bounce on hover
+                        transition={{ duration: 0.2 }}
+                      >
+                        Submit Top-Up Payment
+                      </motion.button>
+                    </div>
+                  </div>
+                </div>
+              </section>): (
+>>>>>>> c89e406 (final)
                 <div className="container mx-auto px-6 mt-8">
                     <div className="grid md:grid-cols-12">
                         <div className="w-full md:col-span-12">
@@ -172,7 +302,12 @@ const page = () => {
                                 <div className="text-center p-3 flex flex-col justify-center items-center">
                                     <h3>How do you want to top up your wallet?</h3>
                                     <div className="flex justify-between items-center py-3 gap-3">
+<<<<<<< HEAD
                                         <Link href={"/bank-transfer"} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</Link>
+=======
+                                        {/* <Link href={"/bank-transfer"} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</Link> */}
+                                        <button onClick={() => setIsBank(true)} className="bg-primary text-white px-3 py-2 rounded-lg">With Bank Transfer</button>
+>>>>>>> c89e406 (final)
                                         <button onClick={() => setIsPaymentGateway(true)} className="bg-primary text-white px-3 py-2 rounded-lg">With Payment Gateway</button>
                                     </div>
                                 </div>
@@ -184,6 +319,7 @@ const page = () => {
                     <div className="grid md:grid-cols-12 gap-6 mt-10">
                         <div className="w-full md:col-span-6">
                             <div className="p-6 h-full border-2 rounded-2xl shadow-xl">
+<<<<<<< HEAD
                                 <h1>Available Credit</h1>
                                 <p className="p3 py-2">Rewards Amount: USD 0.05</p>
                                 <p className="p3 py-2">Wallet Amount: USD 0.00</p>
@@ -196,6 +332,23 @@ const page = () => {
                                 <FaInfoCircle className="-mt-2" style={{fontSize:"45px"}} />
                                 <p className="text-xl m-0"> With Bank Transfer Pay,You Will Receive The Wallet amount after a 4% deduction as a services fee, while with Payment Gateway, you will receive the wallet amount after a 24% deduction ,which includes a 4% service s fee and s 20% VAT.</p>
                             </div>
+=======
+                                <h1 className="text-xl font-bold mb-4">Available Credit</h1>
+                                <p className="text-base text-gray-700 py-2">Rewards Amount: <span className="font-semibold">USD 0.05</span></p>
+                                <p className="text-base text-gray-700 py-2">Wallet Amount: <span className="font-semibold">USD 0.00</span></p>
+                                <p className="text-base text-gray-700 py-2">Total Credit (Rewards + Wallet): <span className="font-semibold">USD 0.05</span></p>
+                            </div>
+                        </div>
+
+                        <div className="w-full md:col-span-6">
+                            <div className="p-6 h-full bg-[#d4d3e4] md:h-[240px] flex justify-center items-center rounded-2xl shadow-xl">
+                                <div className="flex gap-3 items-start">
+                                    <FaInfoCircle className="text-[#4a5568] mt-1" style={{ fontSize: "32px" }} />
+                                    <p className="text-lg text-gray-800 m-0">
+                                        With Bank Transfer Pay, you will receive the wallet amount after a 4% deduction as a service fee, while with Payment Gateway, you will receive the wallet amount after a 24% deduction, which includes a 4% service fee and a 20% VAT.
+                                    </p>
+                                </div>
+>>>>>>> c89e406 (final)
                             </div>
                         </div>
                     </div>
@@ -204,6 +357,10 @@ const page = () => {
                     </div> */}
                 </div>
             )}
+<<<<<<< HEAD
+=======
+            
+>>>>>>> c89e406 (final)
         </section>
     </>
   )

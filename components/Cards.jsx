@@ -10,7 +10,11 @@ const Cards = ({cardsData}) => {
     {cardsData.map((card, index) => (
       <Link href={"/orders"} className='min-w w-full md:col-span-4 custh' key={index}>
         <motion.div
+<<<<<<< HEAD
           className="border-2 custh  rounded-2xl p-3 sm:px-8"
+=======
+          className="border-2 h-full  rounded-2xl p-3 sm:px-8"
+>>>>>>> c89e406 (final)
           key={index}
           initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and slightly below the final position
           whileInView={{ opacity: 1, y: 0 }}  // Fade in and slide to the final position

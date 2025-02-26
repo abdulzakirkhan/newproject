@@ -1,7 +1,11 @@
 export const cardsData=[
     {
         id:1,
+<<<<<<< HEAD
         title:"Total Order",
+=======
+        title:"Total Orders",
+>>>>>>> c89e406 (final)
         count:0,
         time:"Up from yesterday",
         percentage:"8.5%",
