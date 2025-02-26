@@ -8,7 +8,7 @@ export const cardsData=[
         percentage:"8.5%",
         icon:"/home/icons/orders.png",
         bg:"/home/primarybg.svg",
-        statusIcon:"/icons/home/up.svg"
+        statusIcon:"    /icons/home/up.svg"
     },
     {
         id:2,
