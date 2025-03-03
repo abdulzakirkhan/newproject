@@ -6,14 +6,16 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   const pathname = usePathname();
-
+  const router =useRouter()
   const menuItems = [
     { title: "Dashboard", path: "/dashboard", icon: "/dashboard.png" },
     { title: "Orders", path: "/orders", icon: "/icons/sidebar/orders.svg" },
@@ -26,6 +28,15 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
   ];
 
   const handleClick = () => setShowPopUp(!showPopUp);
+
+
+  const LogOutUser = () => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      localStorage.removeItem("authToken");
+      router.push("/login")
+    }
+  }
 
   return (
     <div
@@ -95,7 +106,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
               <button onClick={handleClick} className="text-black px-6 bg-white py-2 rounded-md border-2 border-gray-500">
                 Cancel
               </button>
-              <button className="px-6 py-2 rounded-md text-white bg-[#DC3545]">Log Out</button>
+              <button className="px-6 py-2 rounded-md text-white bg-[#DC3545]" onClick={LogOutUser}>Log Out</button>
             </div>
           </div>
         </div>
