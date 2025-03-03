@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
     if (isAuth) {
       router.push("/dashboard");
       }
-  }, [isAuth])
+  }, [])
   
 
   return (

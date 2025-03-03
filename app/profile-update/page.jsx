@@ -7,6 +7,7 @@ import Image from 'next/image';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import Link from 'next/link';
+import { FaArrowLeftLong } from 'react-icons/fa6';
 const Page = () => {
   const [image, setImage] = useState(null); // State to store the image preview URL
 const [value, setValue] = useState("");
@@ -115,8 +116,6 @@ const [value, setValue] = useState("");
                   <input
                     type="text"
                     id="email"
-                    name="email"
-                    className="w-full p-3 border border-gray-300 rounded-md"
                     name="email" placeholder="Enter your Email"
                     className="w-full p-3 border placeholder:text-sm border-gray-300 rounded-md"
                     onChange={formik.handleChange}
