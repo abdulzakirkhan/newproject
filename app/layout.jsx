@@ -76,6 +76,13 @@ export default function RootLayout({ children }) {
     router.push("/");
   };
 
+  useEffect(() => {
+    if (isAuth) {
+      router.push("/dashboard");
+      }
+  }, [isAuth])
+  
+
   return (
     <html lang="en">
       <body className={isAuth ? "antialiased" : ""}>
