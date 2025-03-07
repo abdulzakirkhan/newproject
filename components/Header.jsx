@@ -3,7 +3,7 @@
 import { ClipboardDocumentIcon, ShareIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiSearch } from "react-icons/hi";
 
 const Header = ({ profileName, profileImage }) => {
@@ -15,6 +15,9 @@ const pathname = usePathname();
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const modalRef = useRef(null);
+
 
 
   const copyToClipboard = () => {
@@ -52,7 +55,25 @@ const pathname = usePathname();
   }
 
 
+
+
   // Close modal on route change
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (modalRef.current && !modalRef.current.contains(e.target)) {
+        setShowModal(false);
+      }
+    };
+
+    if (showModal) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showModal]);
+
   useEffect(() => {
     setShowModal(false);
   }, [pathname]);
@@ -101,7 +122,9 @@ const pathname = usePathname();
     </header>
 
     {showModal ? (
-       <div id="modal-overlay" className="fixed inset-0 flex justify-center items-center" onClick={handleOutsideClick}>
+      <div  className="fixed inset-0 w-full h-full flex justify-center items-center" onClick={() => setShowModal(false)}>
+
+       <div ref={modalRef} className="flex justify-center items-center" onClick={(e) => e.stopPropagation()}>
         <div className="z-50 backdrop-blur-xl border-2 w-1/2 rounded-xl shadow-lg fixed top-48" style={{left:"30%"}}>
           <button onClick={handleClick} className="px-8 py-2">Back</button>
           <div className="mb-8 pt-12 pb-4">
@@ -135,6 +158,7 @@ const pathname = usePathname();
             </div>
         </div>
        </div>
+      </div>
     ) : ""}
     </>
   );
