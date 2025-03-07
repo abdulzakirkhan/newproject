@@ -72,6 +72,7 @@ export default function RootLayout({ children }) {
     setIsAuth(false);
     router.push("/");
   };
+  
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     setIsAuth(!!token);

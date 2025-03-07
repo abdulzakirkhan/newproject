@@ -10,7 +10,7 @@ import Link from "next/link";
 const DashboardPage = () => {
   // const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-
+  const [showFilter, setShowFilter] = useState(false)
   // useEffect(() => {
   //   // Check login status (this can be a session check)
   //   const userLoggedIn = localStorage.getItem("isLoggedIn");
@@ -56,15 +56,57 @@ const DashboardPage = () => {
               </motion.div>
 
               {/* Filter Button */}
-              <motion.button
-                className="bg-orange w-219 btnText text-white rounded-md w-h104 w-[104] hover:bg-primary-dark transition-colors h-[40] flex justify-center items-center gap-2"
-                initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
-                whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}  // Delay for staggered effect
-              >
-                <Image src={"/icons/home/filter.svg"} width={12} height={5} alt="" />
-                Filter
-              </motion.button>
+              <div className="relative">
+                <motion.button onClick={() => setShowFilter(true)}
+                  className="bg-orange w-219 btnText text-white rounded-md w-h104 w-[104] hover:bg-primary-dark transition-colors h-[40] flex justify-center items-center gap-2"
+                  initial={{ opacity: 0, scale: 0.8 }}  // Starts smaller and transparent
+                  whileInView={{ opacity: 1, scale: 1 }}  // Fades in and scales to full size
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}  // Delay for staggered effect
+                >
+                  <Image src={"/icons/home/filter.svg"} width={12} height={5} alt="" />
+                  Filter
+                </motion.button>
+                {showFilter && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute left-0 mt-2 w-48 bg-white border-2 shadow-lg rounded-lg p-4"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span
+                          onClick={() => setShowFilter(false)}
+                          className="text-primary text-2xl -mt-1 -ms-3 cursor-pointer"
+                        >
+                            &lt;
+                        </span>
+                        <h3 className="text-center pb-2 border-b-2">Apply Filters</h3>
+                      </div>
+                      <div className="py-3 space-y-2">
+                        <div className="flex justify-between items-center gap-2">
+                          <label htmlFor="progress">Progress</label>
+                          <input type="checkbox" id="progress" name="progress" />
+                        </div>
+                        <div className="flex justify-between items-center gap-2">
+                          <label htmlFor="completed">Completed</label>
+                          <input type="checkbox" id="completed" name="completed" />
+                        </div>
+                        <div className="flex justify-between items-center gap-2">
+                          <label htmlFor="Paid">Paid</label>
+                          <input type="checkbox" id="Paid" name="Paid" />
+                        </div>
+                        <div className="flex justify-between items-center gap-2">
+                          <label htmlFor="Unpaid">Unpaid</label>
+                          <input type="checkbox" id="Unpaid" name="Unpaid" />
+                        </div>
+                        <div className="flex justify-between items-center gap-2">
+                          <label htmlFor="ppaid">Partially Paid</label>
+                          <input type="checkbox" id="ppaid" name="ppaid" />
+                        </div>
+                      </div>
+                    </motion.div>
+                )}
+              </div>
             </div>
             </motion.div>
 
