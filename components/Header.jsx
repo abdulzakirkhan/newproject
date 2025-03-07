@@ -12,6 +12,7 @@ const Header = ({ profileName, profileImage }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 const pathname = usePathname();
+const dropdownRef = useRef(null);
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -74,8 +75,31 @@ const pathname = usePathname();
     };
   }, [showModal]);
 
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+  
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+  
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+
+
+
+
   useEffect(() => {
     setShowModal(false);
+    setIsDropdownOpen(false);
   }, [pathname]);
   return (
     <>
@@ -97,7 +121,7 @@ const pathname = usePathname();
 
       <div className="flex items-center md:space-x-3">
 
-        <div className="relative">
+        <div className="relative" ref={dropdownRef}>
           <img
             src={"/header/profile.svg"}
             alt="Profile" width={40} height={40}
