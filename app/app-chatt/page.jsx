@@ -57,7 +57,7 @@ const Page = () => {
         {/* Input area fixed at the bottom */}
         <div className="fixed bottom-0 w-full md:w-[92%] bg-white p-4 border-t-2">
           <div className="flex w-full items-center gap-3 pe-8">
-            <button className="bg-primary p-3 rounded-lg text-white">
+            <button className="bg-primary py-2 px-3 rounded-lg text-white">
               <FaPaperclip className="text-2xl cursor-pointer" />
             </button>
             <input
@@ -67,7 +67,7 @@ const Page = () => {
               placeholder="Type a message..."
               className="w-1/2 md:w-[73%] p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button className="bg-primary p-3 rounded-lg text-white">
+            <button className="bg-primary py-2 px-3 rounded-lg text-white">
               <FaMicrophone className="text-2xl cursor-pointer" />
             </button>
             <button className="bg-primary flex items-center gap-2 px-6 py-2 rounded-lg text-white" onClick={handleSendMessage}>
