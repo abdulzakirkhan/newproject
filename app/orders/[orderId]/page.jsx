@@ -385,8 +385,8 @@ const OrderDetail = ({ params }) => {
                               <div className="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="35" height="35">
                                   <circle cx="50" cy="50" r="45" fill="#312E81" />
-                                  <text x="50" y="55" fontFamily="Arial" fontSize="20" fill="white" text-anchor="middle">STRIPE</text>
-                                  <text x="50" y="55" fontFamily="Arial" fontSize="20" fill="white" text-anchor="middle">STRIPE</text>
+                                  <text x="50" y="55" fontFamily="Arial" fontSize="20" fill="white" textAnchor="middle">STRIPE</text>
+                                  <text x="50" y="55" fontFamily="Arial" fontSize="20" fill="white" textAnchor="middle">STRIPE</text>
                                 </svg>
                                 <p className="p1 text-grey">Payment Gateway</p>
                               </div>

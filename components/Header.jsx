@@ -18,7 +18,7 @@ const pathname = usePathname();
 
   const modalRef = useRef(null);
 
-
+  
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText("https://hybridresearchcenter.app.link/u0Ck3qhUNOb");
