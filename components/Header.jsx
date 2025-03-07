@@ -105,10 +105,12 @@ const dropdownRef = useRef(null);
     <>
     <header className="bg-[#312E81] px-2 md:px-0 fixed w-full z-50">
 
-    <div className="flex justify-end px-5" style={{height:"75px"}}>
+    <div className="flex items-center gap-4 justify-end px-8 text-white" style={{height:"75px"}}>
+      <div>
       <button onClick={handleClick} className="non bg-[#3BB537] p3 white px-2 py-2 md:px-4 md:py-3 rounded-md hover:bg-blue-500 transition duration-300">
         Refer and Earn
       </button>
+      </div>
 
       <div className="relative lg:w-1/3 flex items-center">
         <input
@@ -139,7 +141,7 @@ const dropdownRef = useRef(null);
             </div>
           )}
         </div>
-        <span className="text-sm">Hello,User</span>
+        <span className="text-sm">Hello, user</span>
 
       </div>
     </div>
