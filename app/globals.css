@@ -310,6 +310,7 @@ h3{
     width: 100%;
   }
 }
+
 @media (max-width:500px) {
   .non{
     display: none !important;
@@ -360,5 +361,12 @@ h3{
 @media (min-width: 768px) and (max-width: 1200px) {
   .custh{
     height: 17rem !important;
+  }
+}
+
+
+@media (min-width: 1530px) and (max-width: 1548px) {
+  header{
+    padding-right: 1rem !important;
   }
 }
