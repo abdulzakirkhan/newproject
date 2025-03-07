@@ -20,7 +20,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
     { title: "Dashboard", path: "/dashboard", icon: "/dashboard.png" },
     { title: "Orders", path: "/orders", icon: "/icons/sidebar/orders.svg" },
     { title: "Payment History", path: "/payment-history", icon: "/icons/sidebar/payment.svg" },
-    { title: "Wallet", path: "/wallet", icon: "/icons/sidebar/wallet.svg" },
+    { title: "Wallet", path: "/wallet" ,pathTwo : "/bank-transfer", icon: "/icons/sidebar/wallet.svg" },
     { title: "Chat", path: "/app-chatt", icon: "/icons/sidebar/chatt.svg" },
     { title: "Rewards", path: "/rewards", icon: "/icons/sidebar/rewards.svg" },
     { title: "Terms & Conditions", path: "/terms-conditions", icon: "/icons/sidebar/terms.svg" },
@@ -35,6 +35,13 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
     if (token) {
       localStorage.removeItem("authToken");
       router.push("/login")
+    }
+  }
+
+
+  if(pathname === "/bank-transfer"){
+    if (menuItems[3]?.path === "/wallet") {
+      console.log("The third index path is /wallet");
     }
   }
 
@@ -70,7 +77,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
       {/* Sidebar Menu Items */}
       <nav className="mt-1 nav-items flex-grow space-y-3">
         {menuItems.map((item, index) => {
-          const isActive = pathname === item.path;
+          const isActive = pathname === item.path || pathname === item.pathTwo;
           return (
             <Link
               key={index}
