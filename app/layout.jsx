@@ -32,10 +32,7 @@ export default function RootLayout({ children }) {
   const [isSignUp, setIsSignUp] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem("authToken");
-    setIsAuth(!!token);
-  }, []);
+
 
   // Validation schema
   const validationSchema = Yup.object({
@@ -75,12 +72,16 @@ export default function RootLayout({ children }) {
     setIsAuth(false);
     router.push("/");
   };
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    setIsAuth(!!token);
+  }, []);
 
   useEffect(() => {
     if (isAuth) {
       router.push("/dashboard");
       }
-  }, [])
+  }, [isAuth])
   
 
   return (
