@@ -55,7 +55,7 @@ const Page = () => {
         </div>
 
         {/* Input area fixed at the bottom */}
-        <div className="fixed bottom-0 w-full md:w-[92%] bg-white p-4 border-t-2">
+        <div className="fixed bottom-0 w-full lg:w-[calc(100%-208px)] bg-white py-4 border-t-2">
           <div className="flex w-full items-center gap-3 pe-8">
             <button className="bg-primary py-2 px-3 rounded-lg text-white">
               <FaPaperclip className="text-2xl cursor-pointer" />

@@ -52,7 +52,7 @@ const OrderDetail = ({ params }) => {
           <button onClick={() => setSummaryTab(null)} className="flex my-4 items-center gap-2 hover:text-[#312E81]"><FaArrowLeftLong /> Back</button>
             <div className="grid md:grid-cols-12 justify-items-center gap-8 items-center">
               <div className="w-full md:col-span-5">
-                <div className="border-2 p-5 rounded-xl h-60">
+                <div className="border-2 p-5 rounded-xl h-64">
                   <div className="flex items-center gap-2">
                     <FaRegCreditCard size={40} className="text-primary" />
                     <div className="">
@@ -82,7 +82,7 @@ const OrderDetail = ({ params }) => {
               </div>
 
               <div className="w-full md:col-span-5">
-                <div className="border-2 rounded-xl p-5 h-60">
+                <div className="border-2 rounded-xl p-5 h-64">
                   <div className="flex items-center gap-3">
                     <MdPayment size={43} className="text-primary" />
                     <h3 className="text-primary">Payment Method</h3>

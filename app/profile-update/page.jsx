@@ -95,7 +95,7 @@ const [value, setValue] = useState("");
                   <input
                     type="text"
                     id="fullName"
-                    name="fullName"
+                    name="fullName" placeholder='Enter Your Full Name'
                     className="w-full p-3 border border-gray-300 rounded-md"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}

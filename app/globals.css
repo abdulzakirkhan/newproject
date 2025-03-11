@@ -363,10 +363,3 @@ h3{
     height: 17rem !important;
   }
 }
-
-
-@media (min-width: 1530px) and (max-width: 1548px) {
-  header{
-    padding-right: 1rem !important;
-  }
-}

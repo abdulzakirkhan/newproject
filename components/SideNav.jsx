@@ -24,7 +24,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
     { title: "Chat", path: "/app-chatt", icon: "/icons/sidebar/chatt.svg" },
     { title: "Rewards", path: "/rewards", icon: "/icons/sidebar/rewards.svg" },
     { title: "Terms & Conditions", path: "/terms-conditions", icon: "/icons/sidebar/terms.svg" },
-    { title: "Account Setting", path: "/account-setting", icon: "/user.png" },
+    { title: "Account Setting", path: "/account-setting", pathTwo : "/profile-update", pathThree:"/update-password", icon: "/user.png" },
   ];
 
   const handleClick = () => setShowPopUp(!showPopUp);
@@ -77,7 +77,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
       {/* Sidebar Menu Items */}
       <nav className="mt-1 nav-items flex-grow space-y-3">
         {menuItems.map((item, index) => {
-          const isActive = pathname === item.path || pathname === item.pathTwo;
+          const isActive = pathname === item.path || pathname === item.pathTwo || pathname === item.pathThree;
           return (
             <Link
               key={index}
