@@ -1,9 +1,14 @@
 "use client";
 
+import { useGetAllChatsQuery } from "@/redux/chat/chatApi";
 import React, { useState } from "react";
 import { FaPaperclip, FaMicrophone, FaTelegramPlane } from "react-icons/fa"; // Import icons
+import { useSelector } from "react-redux";
 
-const Page = () => {
+const ChatPage = () => {
+
+  const user = useSelector((state) => state.auth?.user);
+  const [page, setPage] = useState(0);
   // State to manage the message input and chat history
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
@@ -12,6 +17,17 @@ const Page = () => {
     { sender: "Customer", content: "I haven't received my item yet.", date: "2025-01-20 11:17:03" },
     { sender: "Support", content: "Let me check your order status.", date: "2025-01-20 11:17:03" },
   ]);
+
+  
+  const {
+    data: getAllChats,
+    isLoading: getAllChatLoading,
+    refetch: getAllChatsReftech,
+    isFetching: getAllChatsFeching,
+  } = useGetAllChatsQuery({
+    id: user?.userid,
+    page,
+  });
 
   // Handle new message input
   const handleMessageChange = (e) => {
@@ -24,6 +40,9 @@ const Page = () => {
     setMessages([...messages, { sender: "Customer", content: message, date: new Date().toLocaleString() }]);
     setMessage(""); // Clear input field
   };
+
+
+  console.log("user :",user)
 
   return (
     <>
@@ -81,4 +100,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ChatPage;
