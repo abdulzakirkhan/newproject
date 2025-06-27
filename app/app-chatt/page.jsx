@@ -42,7 +42,7 @@ const ChatPage = () => {
   };
 
 
-  console.log("user :",user)
+  console.log("getAllChats :",getAllChats)
 
   return (
     <>
